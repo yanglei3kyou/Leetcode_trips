@@ -17,6 +17,18 @@ import Foundation
  */
 
 class Solution {
+    func isPalindrome(_ x: Int) -> Bool {
+        guard x >= 0, ( x == 0 || x % 10 != 0) else { return false }
+        var result: Int = 0
+        var xTmp = x
+        
+        while xTmp > result {
+            result = result * 10 + xTmp % 10
+            xTmp /= 10
+        }
+        return result == xTmp || result / 10 == xTmp
+    }
+    
     func reverse(_ x: Int) -> Int {
         var result: Int = 0
         var xTmp = abs(x)
