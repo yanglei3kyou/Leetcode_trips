@@ -14,6 +14,7 @@
 		953D27FD1D9756C500598862 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953D27FC1D9756C500598862 /* main.swift */; };
 		959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE322EEEC2A00482BC5 /* L-007.swift */; };
 		959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE522EEF4FB00482BC5 /* L-009.swift */; };
+		95B196CB22F0099F003DF7AE /* L-013.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CA22F0099F003DF7AE /* L-013.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 		953D27FC1D9756C500598862 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		959B7DE322EEEC2A00482BC5 /* L-007.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-007.swift"; sourceTree = "<group>"; };
 		959B7DE522EEF4FB00482BC5 /* L-009.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-009.swift"; sourceTree = "<group>"; };
+		95B196CA22F0099F003DF7AE /* L-013.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-013.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				9503DFA222CE17BA001C13C8 /* L-004.swift */,
 				959B7DE322EEEC2A00482BC5 /* L-007.swift */,
 				959B7DE522EEF4FB00482BC5 /* L-009.swift */,
+				95B196CA22F0099F003DF7AE /* L-013.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -144,6 +147,7 @@
 				953D27FD1D9756C500598862 /* main.swift in Sources */,
 				9503DFA322CE17BA001C13C8 /* L-004.swift in Sources */,
 				95334EC922CB0B7400467BA4 /* L-002.swift in Sources */,
+				95B196CB22F0099F003DF7AE /* L-013.swift in Sources */,
 				95334ECB22CB601F00467BA4 /* L-003.swift in Sources */,
 				959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */,
 				959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */,
