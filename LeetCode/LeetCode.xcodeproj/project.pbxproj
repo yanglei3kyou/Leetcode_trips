@@ -16,6 +16,7 @@
 		959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE522EEF4FB00482BC5 /* L-009.swift */; };
 		95B196CB22F0099F003DF7AE /* L-013.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CA22F0099F003DF7AE /* L-013.swift */; };
 		95B196CD22F06323003DF7AE /* L-014.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CC22F06322003DF7AE /* L-014.swift */; };
+		95B196CF22F30D99003DF7AE /* L-020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CE22F30D99003DF7AE /* L-020.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		959B7DE522EEF4FB00482BC5 /* L-009.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-009.swift"; sourceTree = "<group>"; };
 		95B196CA22F0099F003DF7AE /* L-013.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-013.swift"; sourceTree = "<group>"; };
 		95B196CC22F06322003DF7AE /* L-014.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-014.swift"; sourceTree = "<group>"; };
+		95B196CE22F30D99003DF7AE /* L-020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-020.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				959B7DE522EEF4FB00482BC5 /* L-009.swift */,
 				95B196CA22F0099F003DF7AE /* L-013.swift */,
 				95B196CC22F06322003DF7AE /* L-014.swift */,
+				95B196CE22F30D99003DF7AE /* L-020.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -154,6 +157,7 @@
 				95334ECB22CB601F00467BA4 /* L-003.swift in Sources */,
 				959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */,
 				959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */,
+				95B196CF22F30D99003DF7AE /* L-020.swift in Sources */,
 				95B196CD22F06323003DF7AE /* L-014.swift in Sources */,
 				950892C41D966D56008E4254 /* L-001.swift in Sources */,
 			);

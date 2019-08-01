@@ -9,3 +9,4 @@ The practice of leetcode in SINA Comic BJ
 - L009 Palindrome Number
 - L013 Roman to Integer
 - L014 Longest Common Prefix
+- L020 Valid Parentheses
