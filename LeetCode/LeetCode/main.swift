@@ -29,18 +29,38 @@ public class ListNode {
 
 
 class Solution {
-    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        if l1 == nil { return l2 }
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
         
-        if l2 == nil { return l1 }
+        var slow: Int = 0
         
-        if l1?.val ?? 0 < l2?.val ?? 0 {
-            l1?.next = mergeTwoLists(l1?.next, l2)
-            return l1
-        } else {
-            l2?.next = mergeTwoLists(l1, l2?.next)
-            return l2
+        for fast in 1..<nums.count {
+            if nums[slow] != nums[fast] {
+                slow += 1
+                nums[slow] = nums[fast]
+            }
         }
+        return slow + 1
+    }
+    
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        var p1: ListNode? = l1
+        var p2: ListNode? = l2
+        let preHead: ListNode? = ListNode(-1)
+        var prev = preHead
+        while p1 != nil && p2 != nil {
+            if (p1?.val ?? 0) < (p2?.val ?? 0) {
+                prev?.next = p1
+                p1 = p1?.next
+            } else {
+                prev?.next = p2
+                p2 = p2?.next
+            }
+            prev = prev?.next
+        }
+        
+        prev?.next = (p1 == nil) ? p2 : p1
+        return preHead?.next
     }
 }
 
@@ -59,5 +79,6 @@ b.next = c
 d.next = e
 e.next = f
 
-var result = solutionFunc.mergeTwoLists(a, d)
+var arr = [0,0,1,1,1,2,2,3,3,4]
+var result = solutionFunc.removeDuplicates(&arr)
 print(result)

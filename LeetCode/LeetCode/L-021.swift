@@ -35,6 +35,29 @@ func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
 }
 */
 
+// 迭代
+/*
+func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    var p1: ListNode? = l1
+    var p2: ListNode? = l2
+    let preHead: ListNode? = ListNode(-1)
+    var prev = preHead
+    while p1 != nil && p2 != nil {
+        if (p1?.val ?? 0) < (p2?.val ?? 0) {
+            prev?.next = p1
+            p1 = p1?.next
+        } else {
+            prev?.next = p2
+            p2 = p2?.next
+        }
+        prev = prev?.next
+    }
+    
+    prev?.next = (p1 == nil) ? p2 : p1
+    return preHead?.next
+}
+*/
+
 // 构造节点(复杂算法)
 /*
 func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {

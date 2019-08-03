@@ -11,3 +11,4 @@ The practice of leetcode in SINA Comic BJ
 - L014 Longest Common Prefix
 - L020 Valid Parentheses
 - L021 Merge Two Sorted Lists
+- L026 Remove Duplicates from Sorted Array
