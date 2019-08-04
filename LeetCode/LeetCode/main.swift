@@ -29,6 +29,41 @@ public class ListNode {
 
 
 class Solution {
+    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+        guard nums.count != 0 else { return 0 }
+        
+        var length: Int = nums.count
+        var index: Int = 0
+        while index < length {
+            if nums[index] == val {
+                nums[index] = nums[length-1]
+                length -= 1
+            } else {
+                index += 1
+            }
+        }
+        
+        return length
+    }
+    
+    func removeElement1(_ nums: inout [Int], _ val: Int) -> Int {
+        guard nums.count != 0 else { return 0 }
+        
+        var slow: Int = 0
+        for fast in 0..<nums.count {
+            if nums[fast] != val {
+                nums[slow] = nums[fast]
+                slow += 1
+            }
+        }
+        
+        if nums.first == val { nums.removeAll() }
+        
+        return slow
+    }
+    
+    
+    
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         guard nums.count > 0 else { return 0 }
         
@@ -79,6 +114,6 @@ b.next = c
 d.next = e
 e.next = f
 
-var arr = [0,0,1,1,1,2,2,3,3,4]
-var result = solutionFunc.removeDuplicates(&arr)
+var arr = [3,2,2,3]
+var result = solutionFunc.removeElement(&arr, 3)
 print(result)

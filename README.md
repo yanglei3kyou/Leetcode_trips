@@ -12,3 +12,4 @@ The practice of leetcode in SINA Comic BJ
 - L020 Valid Parentheses
 - L021 Merge Two Sorted Lists
 - L026 Remove Duplicates from Sorted Array
+- L027 Remove Element
