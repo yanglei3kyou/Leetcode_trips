@@ -29,6 +29,48 @@ public class ListNode {
 
 
 class Solution {
+    func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+        var left: Int = 0
+        var right: Int = nums.count - 1
+        while left < right {
+            
+            if nums[left] == target { return left }
+            if nums[right] == target { return right }
+            
+            let mid: Int = (left + right) / 2
+            
+            if target == nums[mid] {
+                return mid
+            } else if target < nums[mid] {
+                right = mid
+            } else {
+                left = mid
+            }
+            
+        }
+        return right
+    }
+    
+    func strStr(_ haystack: String, _ needle: String) -> Int {
+        guard !needle.isEmpty else { return 0 }
+
+        guard haystack.count >= needle.count else { return -1 }
+        
+        for i in 0...(haystack.count - needle.count) {
+            for j in 0..<needle.count {
+                if haystack.substring(with: Range(NSRange(location: i+j, length: 1), in: haystack)!) !=
+                     needle.substring(with: Range(NSRange(location: j, length: 1), in: needle)!) {
+                    break
+                }
+                
+                if j == needle.count - 1 {
+                    return i
+                }
+            }
+        }
+        return -1
+    }
+    
     func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
         guard nums.count != 0 else { return 0 }
         
@@ -44,58 +86,6 @@ class Solution {
         }
         
         return length
-    }
-    
-    func removeElement1(_ nums: inout [Int], _ val: Int) -> Int {
-        guard nums.count != 0 else { return 0 }
-        
-        var slow: Int = 0
-        for fast in 0..<nums.count {
-            if nums[fast] != val {
-                nums[slow] = nums[fast]
-                slow += 1
-            }
-        }
-        
-        if nums.first == val { nums.removeAll() }
-        
-        return slow
-    }
-    
-    
-    
-    func removeDuplicates(_ nums: inout [Int]) -> Int {
-        guard nums.count > 0 else { return 0 }
-        
-        var slow: Int = 0
-        
-        for fast in 1..<nums.count {
-            if nums[slow] != nums[fast] {
-                slow += 1
-                nums[slow] = nums[fast]
-            }
-        }
-        return slow + 1
-    }
-    
-    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        var p1: ListNode? = l1
-        var p2: ListNode? = l2
-        let preHead: ListNode? = ListNode(-1)
-        var prev = preHead
-        while p1 != nil && p2 != nil {
-            if (p1?.val ?? 0) < (p2?.val ?? 0) {
-                prev?.next = p1
-                p1 = p1?.next
-            } else {
-                prev?.next = p2
-                p2 = p2?.next
-            }
-            prev = prev?.next
-        }
-        
-        prev?.next = (p1 == nil) ? p2 : p1
-        return preHead?.next
     }
 }
 
@@ -115,5 +105,8 @@ d.next = e
 e.next = f
 
 var arr = [3,2,2,3]
-var result = solutionFunc.removeElement(&arr, 3)
+var result = solutionFunc.searchInsert([1,3,5,6], 4)
 print(result)
+
+
+
