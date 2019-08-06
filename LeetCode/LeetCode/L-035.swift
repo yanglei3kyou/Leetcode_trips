@@ -34,6 +34,26 @@ Input: [1,3,5,6], 0
 Output: 0
 */
 
+// 二分法
+/*
+func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+    var left: Int = 0
+    var right: Int = nums.count - 1
+    
+    while left <= right {
+        let mid: Int = (left + right) / 2
+        if target == nums[mid] {
+            return mid
+        } else if target < nums[mid] {
+            right = mid - 1
+        } else {
+            left = mid + 1
+        }
+        
+    }
+    return left
+}
+*/
 
 // 普通寻找
 /*

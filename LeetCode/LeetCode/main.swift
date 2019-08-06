@@ -29,26 +29,64 @@ public class ListNode {
 
 
 class Solution {
+    
+    func countAndSay(_ n: Int) -> String {
+        guard n > 0, n < 31 else { return "" }
+        
+        var result: String = "1"
+        
+        var char: Character = Character("-")
+        var count: Int = 0
+        var rawString: String = ""
+        
+        var index: Int = 1
+        
+        while index < n {
+            char = Character("-")
+            count = 0
+            rawString = ""
+            
+            for (_, item) in result.enumerated() {
+                if char == item {
+                    count += 1
+                } else {
+                    if count != 0 {
+                        rawString += "\(count)\(char)"
+                    }
+                    char = item
+                    count = 1
+                }
+            }
+            
+            if count != 0 {
+                rawString += "\(count)\(char)"
+            }
+            
+            result = rawString
+            index += 1
+        }
+        return result
+    }
+    
+    
+    
+    
     func searchInsert(_ nums: [Int], _ target: Int) -> Int {
         var left: Int = 0
         var right: Int = nums.count - 1
-        while left < right {
-            
-            if nums[left] == target { return left }
-            if nums[right] == target { return right }
-            
+        
+        while left <= right {
             let mid: Int = (left + right) / 2
-            
             if target == nums[mid] {
                 return mid
             } else if target < nums[mid] {
-                right = mid
+                right = mid - 1
             } else {
-                left = mid
+                left = mid + 1
             }
             
         }
-        return right
+        return left
     }
     
     func strStr(_ haystack: String, _ needle: String) -> Int {
@@ -105,7 +143,7 @@ d.next = e
 e.next = f
 
 var arr = [3,2,2,3]
-var result = solutionFunc.searchInsert([1,3,5,6], 4)
+var result = solutionFunc.countAndSay(4)
 print(result)
 
 
