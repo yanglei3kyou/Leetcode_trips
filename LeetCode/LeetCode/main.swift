@@ -29,6 +29,34 @@ public class ListNode {
 
 
 class Solution {
+    func maxSubArray(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        var result: Int = nums.first!
+        var sum: Int = 0
+        for num in nums {
+            if sum >= 0 {
+                sum += num
+            } else {
+                sum = num
+            }
+            
+            result = max(result, sum)
+        }
+        return result
+    }
+    
+    func maxSubArray1(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        var maxValue: Int = nums.first!
+        for outsideI in 0..<nums.count {
+            var sum: Int = 0
+            for insideI in outsideI..<nums.count {
+                sum += nums[insideI]
+                maxValue = max(maxValue, sum)
+            }
+        }
+        return maxValue
+    }
     
     func countAndSay(_ n: Int) -> String {
         guard n > 0, n < 31 else { return "" }
