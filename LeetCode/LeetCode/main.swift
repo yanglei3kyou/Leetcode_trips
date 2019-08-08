@@ -29,6 +29,26 @@ public class ListNode {
 
 
 class Solution {
+    func addBinary(_ a: String, _ b: String) -> String {
+        var aRevChars:[Character] = a.reversed()
+        var bRevChars:[Character] = b.reversed()
+        
+        var result: String = ""
+        var plus: Int = 0
+        for i in 0..<max(aRevChars.count, bRevChars.count) {
+            let aValue: Int = (i < aRevChars.count) ? (Int("\(aRevChars[i])") ?? 0) : 0
+            let bValue: Int = (i < bRevChars.count) ? (Int("\(bRevChars[i])") ?? 0) : 0
+            let value: Int = aValue + bValue + plus
+            result = "\(value % 2)" + result
+            plus = value / 2
+        }
+        
+        if plus != 0 {
+            result = "\(plus)" + result
+        }
+        
+        return result
+    }
     
     func lengthOfLastWord(_ s: String) -> Int {
         guard s.isEmpty == false else { return 0 }
