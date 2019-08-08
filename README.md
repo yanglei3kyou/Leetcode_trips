@@ -16,3 +16,4 @@ The practice of leetcode in SINA Comic BJ
 - L035 Search Insert Position
 - L038 Count and Say
 - L053 Maximum Subarray
+- L058 Length of Last Word

@@ -18,6 +18,7 @@
 		95614B8822F85CA600A4F61E /* L-035.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95614B8722F85CA600A4F61E /* L-035.swift */; };
 		95614B8A22F99BC300A4F61E /* L-038.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95614B8922F99BC300A4F61E /* L-038.swift */; };
 		95614B8C22FAA7F500A4F61E /* L-053.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95614B8B22FAA7F500A4F61E /* L-053.swift */; };
+		95614B8E22FBF45500A4F61E /* L-058.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95614B8D22FBF45500A4F61E /* L-058.swift */; };
 		959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE322EEEC2A00482BC5 /* L-007.swift */; };
 		959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE522EEF4FB00482BC5 /* L-009.swift */; };
 		95B196CB22F0099F003DF7AE /* L-013.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CA22F0099F003DF7AE /* L-013.swift */; };
@@ -52,6 +53,7 @@
 		95614B8722F85CA600A4F61E /* L-035.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-035.swift"; sourceTree = "<group>"; };
 		95614B8922F99BC300A4F61E /* L-038.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-038.swift"; sourceTree = "<group>"; };
 		95614B8B22FAA7F500A4F61E /* L-053.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-053.swift"; sourceTree = "<group>"; };
+		95614B8D22FBF45500A4F61E /* L-058.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-058.swift"; sourceTree = "<group>"; };
 		959B7DE322EEEC2A00482BC5 /* L-007.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-007.swift"; sourceTree = "<group>"; };
 		959B7DE522EEF4FB00482BC5 /* L-009.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-009.swift"; sourceTree = "<group>"; };
 		95B196CA22F0099F003DF7AE /* L-013.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-013.swift"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				95614B8722F85CA600A4F61E /* L-035.swift */,
 				95614B8922F99BC300A4F61E /* L-038.swift */,
 				95614B8B22FAA7F500A4F61E /* L-053.swift */,
+				95614B8D22FBF45500A4F61E /* L-058.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -177,6 +180,7 @@
 				95478CF922F5AAE100D12C80 /* L-026.swift in Sources */,
 				95B196D122F44DEE003DF7AE /* L-021.swift in Sources */,
 				95B196CB22F0099F003DF7AE /* L-013.swift in Sources */,
+				95614B8E22FBF45500A4F61E /* L-058.swift in Sources */,
 				95614B8822F85CA600A4F61E /* L-035.swift in Sources */,
 				95334ECB22CB601F00467BA4 /* L-003.swift in Sources */,
 				959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */,

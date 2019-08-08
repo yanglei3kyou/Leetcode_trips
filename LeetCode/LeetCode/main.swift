@@ -29,6 +29,18 @@ public class ListNode {
 
 
 class Solution {
+    func lengthOfLastWord(_ s: String) -> Int {
+        guard s.isEmpty == false else { return 0 }
+        var length: Int = 0
+        for char in s.reversed() {
+            if char == " " {
+                if length != 0 { break } else { continue }
+            }
+            length += 1
+        }
+        return length
+    }
+    
     func maxSubArray(_ nums: [Int]) -> Int {
         guard nums.count > 0 else { return 0 }
         var result: Int = nums.first!
@@ -171,7 +183,7 @@ d.next = e
 e.next = f
 
 var arr = [3,2,2,3]
-var result = solutionFunc.countAndSay(4)
+var result = solutionFunc.lengthOfLastWord("hello world")
 print(result)
 
 
