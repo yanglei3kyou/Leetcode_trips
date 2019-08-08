@@ -17,3 +17,4 @@ The practice of leetcode in SINA Comic BJ
 - L038 Count and Say
 - L053 Maximum Subarray
 - L058 Length of Last Word
+- L066 Plus One
