@@ -19,3 +19,4 @@ The practice of leetcode in SINA Comic BJ
 - L058 Length of Last Word
 - L066 Plus One
 - L067 Add Binary
+- L069 Sqrt(x)

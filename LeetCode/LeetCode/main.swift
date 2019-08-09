@@ -29,6 +29,36 @@ public class ListNode {
 
 
 class Solution {
+    func mySqrt(_ x: Int) -> Int {
+        var left: Int = 0
+        var right: Int = (x / 2) + 1
+        
+        while left < right {
+            let mid: Int = (left + right + 1) >> 1
+            let suare: Int = mid * mid
+            if suare > x {
+                right = mid - 1
+            } else {
+                left = mid
+            }
+        }
+        return left
+    }
+    
+    func mySqrt1(_ x: Int) -> Int {
+        var result: Int = 0
+        for index in 0...Int.max {
+            if index * index == x {
+                return index
+            } else if index * index < x {
+                result = index
+            } else {
+                return result
+            }
+        }
+        return result
+    }
+    
     func addBinary(_ a: String, _ b: String) -> String {
         var aRevChars:[Character] = a.reversed()
         var bRevChars:[Character] = b.reversed()
@@ -108,5 +138,5 @@ d.next = e
 e.next = f
 
 var arr = [3,2,2,3]
-var result = solutionFunc.lengthOfLastWord("hello world")
+var result = solutionFunc.mySqrt(9)
 print(result)
