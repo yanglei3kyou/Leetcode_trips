@@ -20,3 +20,4 @@ The practice of leetcode in SINA Comic BJ
 - L066 Plus One
 - L067 Add Binary
 - L069 Sqrt(x)
+- L070 Climbing Stairs

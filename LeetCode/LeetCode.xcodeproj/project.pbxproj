@@ -28,6 +28,7 @@
 		95B196CD22F06323003DF7AE /* L-014.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CC22F06322003DF7AE /* L-014.swift */; };
 		95B196CF22F30D99003DF7AE /* L-020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196CE22F30D99003DF7AE /* L-020.swift */; };
 		95B196D122F44DEE003DF7AE /* L-021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B196D022F44DEE003DF7AE /* L-021.swift */; };
+		95FBB85922FE83D2002D6ABE /* L-070.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBB85822FE83D2002D6ABE /* L-070.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +67,7 @@
 		95B196CC22F06322003DF7AE /* L-014.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-014.swift"; sourceTree = "<group>"; };
 		95B196CE22F30D99003DF7AE /* L-020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-020.swift"; sourceTree = "<group>"; };
 		95B196D022F44DEE003DF7AE /* L-021.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-021.swift"; sourceTree = "<group>"; };
+		95FBB85822FE83D2002D6ABE /* L-070.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-070.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				9536242E22FC089D007B86C0 /* L-066.swift */,
 				9536243022FC4F27007B86C0 /* L-067.swift */,
 				9536243222FD154A007B86C0 /* L-069.swift */,
+				95FBB85822FE83D2002D6ABE /* L-070.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -199,6 +202,7 @@
 				95614B8C22FAA7F500A4F61E /* L-053.swift in Sources */,
 				959B7DE622EEF4FB00482BC5 /* L-009.swift in Sources */,
 				95614B8A22F99BC300A4F61E /* L-038.swift in Sources */,
+				95FBB85922FE83D2002D6ABE /* L-070.swift in Sources */,
 				95B196CF22F30D99003DF7AE /* L-020.swift in Sources */,
 				95478CFB22F688DE00D12C80 /* L-027.swift in Sources */,
 				95614B8622F7D3E100A4F61E /* L-028.swift in Sources */,

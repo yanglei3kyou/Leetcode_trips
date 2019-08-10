@@ -29,6 +29,29 @@ public class ListNode {
 
 
 class Solution {
+    func climbStairs(_ n: Int) -> Int {
+        guard n > 0 else { return 0 }
+        var first: Int = 1
+        guard n > 1 else { return first }
+        var second: Int = 2
+        guard n > 2 else { return second }
+        
+        for _ in 3...n {
+            let third = second + first
+            first = second
+            second = third
+        }
+        return second
+    }
+    
+    func climb_Stairs(_ i: Int, n: Int, memo: inout [Int]) -> Int {
+        guard i <= n else { return 0 }
+        if i == n { return 1 }
+        if memo[i] > 0 { return memo[i] }
+        memo[i] = climb_Stairs(i + 1, n: n, memo: &memo) + climb_Stairs(i + 2, n: n, memo: &memo)
+        return memo[i]
+    }
+    
     func mySqrt(_ x: Int) -> Int {
         var left: Int = 0
         var right: Int = (x / 2) + 1
