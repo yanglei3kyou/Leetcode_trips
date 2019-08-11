@@ -29,6 +29,19 @@ public class ListNode {
 
 
 class Solution {
+    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+        guard head != nil  else { return nil }
+        var curNode: ListNode? = head
+        while curNode != nil && curNode?.next != nil {
+            if curNode?.val == curNode?.next?.val {
+                curNode?.next = curNode?.next?.next
+            } else {
+                curNode = curNode?.next
+            }
+        }
+        return head
+    }
+    
     func climbStairs(_ n: Int) -> Int {
         guard n > 0 else { return 0 }
         var first: Int = 1
@@ -148,18 +161,18 @@ class Solution {
 var solutionFunc = Solution.init()
 
 let a = ListNode(1)
-let b = ListNode(2)
-let c = ListNode(4)
-let d = ListNode(1)
+let b = ListNode(1)
+let c = ListNode(2)
+let d = ListNode(2)
 let e = ListNode(3)
 let f = ListNode(4)
 
 a.next = b
 b.next = c
-
+c.next = d
 d.next = e
 e.next = f
 
 var arr = [3,2,2,3]
-var result = solutionFunc.mySqrt(9)
+var result = solutionFunc.deleteDuplicates(a)
 print(result)

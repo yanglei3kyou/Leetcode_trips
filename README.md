@@ -21,3 +21,4 @@ The practice of leetcode in SINA Comic BJ
 - L067 Add Binary
 - L069 Sqrt(x)
 - L070 Climbing Stairs
+- L083 Remove Duplicates from Sorted List
