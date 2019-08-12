@@ -22,3 +22,4 @@ The practice of leetcode in SINA Comic BJ
 - L069 Sqrt(x)
 - L070 Climbing Stairs
 - L083 Remove Duplicates from Sorted List
+- L088 Merge Sorted Array

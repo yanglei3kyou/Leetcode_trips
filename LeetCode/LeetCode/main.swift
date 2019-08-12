@@ -29,133 +29,29 @@ public class ListNode {
 
 
 class Solution {
-    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
-        guard head != nil  else { return nil }
-        var curNode: ListNode? = head
-        while curNode != nil && curNode?.next != nil {
-            if curNode?.val == curNode?.next?.val {
-                curNode?.next = curNode?.next?.next
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        var i: Int = m - 1
+        var j: Int = n - 1
+        var p: Int = m + n - 1
+        while i >= 0 && j >= 0 {
+            if (nums1[i] >= nums2[j]) {
+                nums1[p] = nums1[i]
+                i -= 1
             } else {
-                curNode = curNode?.next
+                nums1[p] = nums2[j]
+                j -= 1
             }
-        }
-        return head
-    }
-    
-    func climbStairs(_ n: Int) -> Int {
-        guard n > 0 else { return 0 }
-        var first: Int = 1
-        guard n > 1 else { return first }
-        var second: Int = 2
-        guard n > 2 else { return second }
-        
-        for _ in 3...n {
-            let third = second + first
-            first = second
-            second = third
-        }
-        return second
-    }
-    
-    func climb_Stairs(_ i: Int, n: Int, memo: inout [Int]) -> Int {
-        guard i <= n else { return 0 }
-        if i == n { return 1 }
-        if memo[i] > 0 { return memo[i] }
-        memo[i] = climb_Stairs(i + 1, n: n, memo: &memo) + climb_Stairs(i + 2, n: n, memo: &memo)
-        return memo[i]
-    }
-    
-    func mySqrt(_ x: Int) -> Int {
-        var left: Int = 0
-        var right: Int = (x / 2) + 1
-        
-        while left < right {
-            let mid: Int = (left + right + 1) >> 1
-            let suare: Int = mid * mid
-            if suare > x {
-                right = mid - 1
-            } else {
-                left = mid
-            }
-        }
-        return left
-    }
-    
-    func mySqrt1(_ x: Int) -> Int {
-        var result: Int = 0
-        for index in 0...Int.max {
-            if index * index == x {
-                return index
-            } else if index * index < x {
-                result = index
-            } else {
-                return result
-            }
-        }
-        return result
-    }
-    
-    func addBinary(_ a: String, _ b: String) -> String {
-        var aRevChars:[Character] = a.reversed()
-        var bRevChars:[Character] = b.reversed()
-        
-        var result: String = ""
-        var plus: Int = 0
-        for i in 0..<max(aRevChars.count, bRevChars.count) {
-            let aValue: Int = (i < aRevChars.count) ? (Int("\(aRevChars[i])") ?? 0) : 0
-            let bValue: Int = (i < bRevChars.count) ? (Int("\(bRevChars[i])") ?? 0) : 0
-            let value: Int = aValue + bValue + plus
-            result = "\(value % 2)" + result
-            plus = value / 2
+            p -= 1
         }
         
-        if plus != 0 {
-            result = "\(plus)" + result
+        while j >= 0 {
+            nums1[p] = nums2[j]
+            j -= 1
+            p -= 1
         }
-        
-        return result
     }
-    
-    func lengthOfLastWord(_ s: String) -> Int {
-        guard s.isEmpty == false else { return 0 }
-        var length: Int = 0
-        for char in s.reversed() {
-            if char == " " {
-                if length != 0 { break } else { continue }
-            }
-            length += 1
-        }
-        return length
-    }
-    
-    func maxSubArray(_ nums: [Int]) -> Int {
-        guard nums.count > 0 else { return 0 }
-        var result: Int = nums.first!
-        var sum: Int = 0
-        for num in nums {
-            if sum >= 0 {
-                sum += num
-            } else {
-                sum = num
-            }
-            
-            result = max(result, sum)
-        }
-        return result
-    }
-    
-    func maxSubArray1(_ nums: [Int]) -> Int {
-        guard nums.count > 0 else { return 0 }
-        var maxValue: Int = nums.first!
-        for outsideI in 0..<nums.count {
-            var sum: Int = 0
-            for insideI in outsideI..<nums.count {
-                sum += nums[insideI]
-                maxValue = max(maxValue, sum)
-            }
-        }
-        return maxValue
-    }
+    //   3 4 5 0 0 0     1 2 3
+    //   1 2 3 0 0 0     3 4 5
 }
 
 var solutionFunc = Solution.init()
@@ -173,6 +69,6 @@ c.next = d
 d.next = e
 e.next = f
 
-var arr = [3,2,2,3]
-var result = solutionFunc.deleteDuplicates(a)
+var arr = [0]
+var result = solutionFunc.merge(&arr, 0, [1], 1)
 print(result)
