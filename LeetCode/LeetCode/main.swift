@@ -27,8 +27,56 @@ public class ListNode {
 }
 
 
+public class TreeNode {
+    public var val: Int
+    public var left: TreeNode?
+    public var right: TreeNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.left = nil
+        self.right = nil
+    }
+}
+
 
 class Solution {
+    func check(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+        if p == nil && q == nil { return true }
+        if p == nil || q == nil { return false }
+        if p?.val != q?.val { return false } else { return true }
+    }
+    
+    func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+        if p == nil && q == nil { return true }
+        
+        if !check(p, q) { return false }
+        
+        var depP: [TreeNode?] = [p]
+        var depQ: [TreeNode?] = [q]
+        
+        while !depP.isEmpty {
+            let p = depP.removeLast()
+            let q = depQ.removeLast()
+            
+            if !check(p, q) { return false }
+            
+            if p != nil {
+                if !check(p?.left, q?.left) { return false }
+                if p?.left != nil {
+                    depP.insert(p?.left, at: depP.count)
+                    depQ.insert(q?.left, at: depQ.count)
+                }
+             
+                if !check(p?.right, q?.right) { return false }
+                if p?.right != nil {
+                    depP.insert(p?.right, at: depP.count)
+                    depQ.insert(q?.right, at: depQ.count)
+                }
+            }
+        }
+        return true
+    }
+    
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         var i: Int = m - 1
         var j: Int = n - 1
