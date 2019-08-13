@@ -40,6 +40,46 @@ public class TreeNode {
 
 
 class Solution {
+    func isSymmetric(_ root: TreeNode?) -> Bool {
+        var treeStack: [TreeNode?] = [TreeNode?]()
+        treeStack.append(root)
+        treeStack.append(root)
+        
+        while !treeStack.isEmpty {
+            let tree1: TreeNode? = treeStack.removeLast()
+            let tree2: TreeNode? = treeStack.removeLast()
+
+            if tree1 == nil && tree2 == nil { continue }
+            if tree1 == nil || tree2 == nil { return false }
+            if tree1?.val != tree2?.val { return false }
+            
+            treeStack.append(tree1?.left)
+            treeStack.append(tree2?.right)
+            treeStack.append(tree1?.right)
+            treeStack.append(tree2?.left)
+        }
+        return true
+    }
+    
+ 
+    
+    
+    func getTreeNode(_ root: TreeNode?, array: inout [Int?], isLeft: Bool) {
+        
+        guard root?.left != nil || root?.right != nil else { array.append(root?.val); return }
+        array.append(root?.val)
+        
+        if isLeft {
+            getTreeNode(root?.left, array: &array, isLeft: isLeft)
+            getTreeNode(root?.right, array: &array, isLeft: isLeft)
+        } else {
+            getTreeNode(root?.right, array: &array, isLeft: isLeft)
+            getTreeNode(root?.left, array: &array, isLeft: isLeft)
+        }
+    }
+    
+    
+    
     func check(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
         if p == nil && q == nil { return true }
         if p == nil || q == nil { return false }
@@ -117,6 +157,23 @@ c.next = d
 d.next = e
 e.next = f
 
+let tree1 = TreeNode(1)
+let tree2 = TreeNode(2)
+let tree3 = TreeNode(2)
+let tree4 = TreeNode(3)
+let tree5 = TreeNode(4)
+let tree6 = TreeNode(4)
+let tree7 = TreeNode(3)
+
+tree1.left = tree2
+tree1.right = tree3
+
+tree2.left = tree4
+tree2.right = tree5
+
+tree3.left = tree6
+tree3.right = tree7
+
 var arr = [0]
-var result = solutionFunc.merge(&arr, 0, [1], 1)
+var result = solutionFunc.isSymmetric(tree1)
 print(result)
