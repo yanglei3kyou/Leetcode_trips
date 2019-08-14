@@ -40,6 +40,27 @@ public class TreeNode {
 
 
 class Solution {
+    func maxDepth(_ root: TreeNode?) -> Int {
+        guard root != nil else { return 0 }
+        
+        var queue: [TreeNode?] = [root]
+        var depth: Int = 0
+        
+        while !queue.isEmpty {
+            var array: [TreeNode?] = []
+            
+            while !queue.isEmpty {
+                let tree: TreeNode? = queue.removeFirst()
+                if tree?.left != nil { array.append(tree?.left) }
+                if tree?.right != nil { array.append(tree?.right) }
+            }
+            
+            depth += 1
+            queue = array
+        }
+        return depth
+    }
+    
     func isSymmetric(_ root: TreeNode?) -> Bool {
         var treeStack: [TreeNode?] = [TreeNode?]()
         treeStack.append(root)

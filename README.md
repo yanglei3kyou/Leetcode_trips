@@ -25,3 +25,4 @@ The practice of leetcode in SINA Comic BJ
 - L088 Merge Sorted Array
 - L100 Same Tree
 - L101 Symmetric Tree
+- L104 Maximum Depth of Binary Tree
