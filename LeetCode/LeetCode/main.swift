@@ -40,6 +40,21 @@ public class TreeNode {
 
 
 class Solution {
+    func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
+        guard root != nil else { return [] }
+        var result: [[Int]] = []
+        levelOrderBottom(root, depth: 0, result: &result)
+        return result.reversed()
+    }
+    
+    func levelOrderBottom(_ node: TreeNode?, depth: Int, result: inout [[Int]]) {
+        guard node != nil else { return }
+        if result.count > depth { result[depth].append(node?.val ?? 0) } else { result.append([node?.val ?? 0]) }
+        if node?.left != nil { levelOrderBottom(node?.left, depth: depth + 1, result: &result) }
+        if node?.right != nil { levelOrderBottom(node?.right, depth: depth + 1, result: &result) }
+    }
+    
+    
     func maxDepth(_ root: TreeNode?) -> Int {
         guard root != nil else { return 0 }
         
