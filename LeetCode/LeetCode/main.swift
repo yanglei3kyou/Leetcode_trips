@@ -40,6 +40,45 @@ public class TreeNode {
 
 
 class Solution {
+    class MyTreeNode {
+        public var root: TreeNode
+        public var start: Int
+        public var end: Int
+        
+        public init(_ root: TreeNode, start: Int, end: Int) {
+            self.root = root
+            self.start = start
+            self.end = end
+        }
+    }
+    
+    func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
+        guard nums.count > 0 else { return nil }
+        var rootQueue: [MyTreeNode] = []
+        let root: TreeNode = TreeNode(0)
+        
+        rootQueue.append(MyTreeNode(root, start: 0, end: nums.count))
+        
+        while !rootQueue.isEmpty {
+            let myRoot: MyTreeNode = rootQueue.removeLast()
+            
+            let start: Int = myRoot.start
+            let end: Int = myRoot.end
+            let mid: Int = (start + end ) >> 1
+            let curRoot: TreeNode = myRoot.root
+            curRoot.val = nums[mid]
+            if start < mid {
+                curRoot.left = TreeNode(0)
+                rootQueue.append(MyTreeNode(curRoot.left!, start: start, end: mid))
+            }
+            if mid + 1 < end {
+                curRoot.right = TreeNode(0)
+                rootQueue.append(MyTreeNode(curRoot.right!, start: mid+1, end: end))
+            }
+        }
+        return root
+    }
+    
     func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
         guard root != nil else { return [] }
         var result: [[Int]] = []
