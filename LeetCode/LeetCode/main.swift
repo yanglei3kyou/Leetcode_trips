@@ -40,6 +40,19 @@ public class TreeNode {
 
 
 class Solution {
+    func isBalanced(_ root: TreeNode?) -> Bool {
+        guard root != nil else { return true }
+        return abs(depth(root?.left) - depth(root?.right)) < 2 &&
+               isBalanced(root?.left) &&
+               isBalanced(root?.right)
+    }
+    
+    func depth(_ root: TreeNode?) -> Int {
+        guard let node = root else { return 0 }
+        return max(depth(node.left), depth(node.right)) + 1
+    }
+    
+    
     class MyTreeNode {
         public var root: TreeNode
         public var start: Int
