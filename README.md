@@ -29,3 +29,4 @@ The practice of leetcode in SINA Comic BJ
 - L107 Binary Tree Level Order Traversal II
 - L108 Convert Sorted Array to Binary Search Tree
 - L110 Balanced Binary Tree
+- L111 Minimum Depth of Binary Tree

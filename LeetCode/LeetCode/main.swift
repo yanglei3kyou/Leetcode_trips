@@ -40,6 +40,24 @@ public class TreeNode {
 
 
 class Solution {
+    func minDepth(_ root: TreeNode?) -> Int {
+        guard let node = root else { return 0 }
+        var stack: [(TreeNode, Int)] = [(node, 1)]
+
+        var currentDepth: Int = 0
+
+        while !stack.isEmpty {
+            let current = stack.removeLast()
+            let currentNode: TreeNode = current.0
+            currentDepth = current.1
+            
+            if currentNode.left == nil && currentNode.right == nil { break }
+            if let leftNode = currentNode.left { stack.append((leftNode, currentDepth + 1)) }
+            if let rightNode = currentNode.right { stack.append((rightNode, currentDepth + 1)) }
+        }
+        return currentDepth
+    }
+    
     func isBalanced(_ root: TreeNode?) -> Bool {
         guard root != nil else { return true }
         return abs(depth(root?.left) - depth(root?.right)) < 2 &&
