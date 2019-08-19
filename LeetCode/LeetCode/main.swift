@@ -40,6 +40,34 @@ public class TreeNode {
 
 
 class Solution {
+    func hasPathSum(_ root: TreeNode?, _ sum: Int) -> Bool {
+        guard let node = root else { return false }
+        var stack: [(TreeNode?, Int)] = [(node, node.val)]
+        
+        while !stack.isEmpty {
+            let current = stack.removeLast()
+            let currentNode: TreeNode? = current.0
+            let currentSum: Int = current.1
+            
+            if currentNode?.left == nil && currentNode?.right == nil {
+                if currentSum == sum {
+                    return true
+                } else {
+                    continue
+                }
+            }
+            
+            if currentNode?.left != nil {
+                stack.append((currentNode?.left, currentSum + (currentNode?.left?.val ?? 0)))
+            }
+            
+            if currentNode?.right != nil {
+                stack.append((currentNode?.right, currentSum + (currentNode?.right?.val ?? 0)))
+            }
+        }
+        return false
+    }
+    
     func minDepth(_ root: TreeNode?) -> Int {
         guard let node = root else { return 0 }
         var stack: [(TreeNode, Int)] = [(node, 1)]
