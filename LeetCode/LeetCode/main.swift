@@ -40,6 +40,26 @@ public class TreeNode {
 
 
 class Solution {
+    func generate(_ numRows: Int) -> [[Int]] {
+        var result: [[Int]] = []
+        generate([], numRows: numRows, result: &result)
+        return result
+    }
+    
+    func generate(_ rows: [Int], numRows: Int, result: inout [[Int]]) {
+        guard numRows > 0 else { result = []; return }        
+        guard result.count < numRows else { return }
+        var array: [Int] = []
+        var last: Int = 0
+        for row in rows {
+            array.append(last + row)
+            last = row
+        }
+        array.append(1)
+        result.append(array)
+        generate(array, numRows: numRows, result: &result)
+    }
+    
     func hasPathSum(_ root: TreeNode?, _ sum: Int) -> Bool {
         guard let node = root else { return false }
         var stack: [(TreeNode?, Int)] = [(node, node.val)]
@@ -309,5 +329,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isSymmetric(tree1)
+var result = solutionFunc.generate(5)
 print(result)

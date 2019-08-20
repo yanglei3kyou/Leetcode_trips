@@ -31,3 +31,4 @@ The practice of leetcode in SINA Comic BJ
 - L110 Balanced Binary Tree
 - L111 Minimum Depth of Binary Tree
 - L112 Path Sum
+- L118 Pascal's Triangle
