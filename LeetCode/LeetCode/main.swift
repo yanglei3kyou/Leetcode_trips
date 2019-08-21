@@ -40,6 +40,25 @@ public class TreeNode {
 
 
 class Solution {
+    func getRow(_ rowIndex: Int) -> [Int] {
+        return getRow([], rowIndex: rowIndex + 1)
+    }
+    
+    func getRow(_ rows: [Int], rowIndex: Int) -> [Int] {
+        guard rows.count != rowIndex else { return rows }
+        
+        var last: Int = 0
+        var array: [Int] = []
+        for value in rows {
+            array.append(last + value)
+            last = value
+        }
+        array.append(1)
+        return getRow(array, rowIndex: rowIndex)
+    }
+    
+    
+    
     func generate(_ numRows: Int) -> [[Int]] {
         var result: [[Int]] = []
         generate([], numRows: numRows, result: &result)
@@ -47,7 +66,7 @@ class Solution {
     }
     
     func generate(_ rows: [Int], numRows: Int, result: inout [[Int]]) {
-        guard numRows > 0 else { result = []; return }        
+        guard numRows > 0 else { result = []; return }
         guard result.count < numRows else { return }
         var array: [Int] = []
         var last: Int = 0
@@ -329,5 +348,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.generate(5)
+var result = solutionFunc.getRow(5)
 print(result)
