@@ -40,6 +40,13 @@ public class TreeNode {
 
 
 class Solution {
+    func isPalindrome(_ s: String) -> Bool {
+        guard s.count > 0 else { return true }
+        let sChars: [Character] = s.lowercased().reversed().filter { ("a" <= $0 && $0 <= "z") || ("0" <= $0 && $0 <= "9") }
+        return sChars.reversed() == sChars
+    }
+    
+    
     func getRow(_ rowIndex: Int) -> [Int] {
         return getRow([], rowIndex: rowIndex + 1)
     }
@@ -348,5 +355,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.getRow(5)
+var result = solutionFunc.isPalindrome("OP")
 print(result)

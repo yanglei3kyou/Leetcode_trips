@@ -33,3 +33,4 @@ The practice of leetcode in SINA Comic BJ
 - L112 Path Sum
 - L118 Pascal's Triangle
 - L119 Pascal's Triangle II
+- L125 Valid Palindrome
