@@ -40,6 +40,14 @@ public class TreeNode {
 
 
 class Solution {
+    func singleNumber(_ nums: [Int]) -> Int {
+        var result: Int = 0
+        for num in nums {
+            result ^= num
+        }
+        return result
+    }
+    
     func isPalindrome(_ s: String) -> Bool {
         guard s.count > 0 else { return true }
         let sChars: [Character] = s.lowercased().reversed().filter { ("a" <= $0 && $0 <= "z") || ("0" <= $0 && $0 <= "9") }
