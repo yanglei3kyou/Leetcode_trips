@@ -35,3 +35,4 @@ The practice of leetcode in SINA Comic BJ
 - L119 Pascal's Triangle II
 - L125 Valid Palindrome
 - L136 Single Number
+- L141 Linked List Cycle
