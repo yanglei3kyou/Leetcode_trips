@@ -39,6 +39,13 @@ public class TreeNode {
 
 
 class Solution {
+    
+    func hasCycle(_ head: ListNode?) -> Bool {
+        var nodesSeen: Set = Set()
+        return true
+    }
+    
+    
     func singleNumber(_ nums: [Int]) -> Int {
         var result: Int = 0
         for num in nums {

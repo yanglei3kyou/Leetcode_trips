@@ -22,6 +22,22 @@ Explanation: There is a cycle in the linked list, where tail connects to the sec
  
 */
 
+// 双指针(快慢指针)(Swift)
+/*
+func hasCycle(_ head: ListNode?) -> Bool {
+    guard head != nil && head?.next != nil else { return false }
+    var slow: ListNode? = head
+    var fast: ListNode? = head?.next
+    while slow != fast {
+        if fast == nil || fast?.next == nil {
+            return false
+        }
+        slow = slow?.next
+        fast = fast?.next?.next
+    }
+    return true
+}
+*/
 
 // 集合(Java)
 /*
