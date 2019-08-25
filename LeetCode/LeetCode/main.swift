@@ -38,14 +38,38 @@ public class TreeNode {
 }
 
 
-class Solution {
+class MinStack {
+    fileprivate var stack: [Int] = []
+    fileprivate var minStack: [Int] = []
     
-    func hasCycle(_ head: ListNode?) -> Bool {
-        var nodesSeen: Set = Set()
-        return true
+    init() { }
+    
+    func push(_ x: Int) {
+        stack.append(x)
+        if let minValue: Int = minStack.last, x > minValue {
+        } else {
+            minStack.append(x)
+        }
     }
     
+    func pop() {
+        let item: Int = stack.removeLast()
+        if let minItem = minStack.last, minItem == item {
+            minStack.removeLast()
+        }
+    }
     
+    func top() -> Int {
+        return stack.last ?? 0
+    }
+    
+    func getMin() -> Int {
+        return minStack.last ?? 0
+    }
+}
+
+
+class Solution {
     func singleNumber(_ nums: [Int]) -> Int {
         var result: Int = 0
         for num in nums {

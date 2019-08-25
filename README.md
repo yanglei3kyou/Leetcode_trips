@@ -36,3 +36,4 @@ The practice of leetcode in SINA Comic BJ
 - L125 Valid Palindrome
 - L136 Single Number
 - L141 Linked List Cycle
+- L155 Min Stack
