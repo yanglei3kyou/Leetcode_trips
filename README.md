@@ -37,3 +37,4 @@ The practice of leetcode in SINA Comic BJ
 - L136 Single Number
 - L141 Linked List Cycle
 - L155 Min Stack
+- L160 Intersection of Two Linked Lists

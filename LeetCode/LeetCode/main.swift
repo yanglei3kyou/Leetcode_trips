@@ -70,6 +70,18 @@ class MinStack {
 
 
 class Solution {
+    
+    func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+        guard headA != nil, headB != nil else { return nil }
+        var pA = headA
+        var pB = headB
+        while pA != pB {
+            pA = pA != nil ? pA?.next : headB
+            pB = pB != nil ? pB?.next : headA
+        }
+        return pA
+    }
+    
     func singleNumber(_ nums: [Int]) -> Int {
         var result: Int = 0
         for num in nums {
