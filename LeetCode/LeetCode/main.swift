@@ -71,15 +71,20 @@ class MinStack {
 
 class Solution {
     
-    func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
-        guard headA != nil, headB != nil else { return nil }
-        var pA = headA
-        var pB = headB
-        while pA != pB {
-            pA = pA != nil ? pA?.next : headB
-            pB = pB != nil ? pB?.next : headA
+    func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+        var left: Int = 0
+        var right: Int = numbers.count - 1
+        while left < right {
+            let sum = numbers[left] + numbers[right]
+            if sum == target {
+                return [left + 1, right + 1]
+            } else if sum > target {
+                right -= 1
+            } else {
+                left += 1
+            }
         }
-        return pA
+        return []
     }
     
     func singleNumber(_ nums: [Int]) -> Int {
