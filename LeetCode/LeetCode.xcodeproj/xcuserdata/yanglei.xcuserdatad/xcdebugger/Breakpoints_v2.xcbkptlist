@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "Solution"
-            landmarkType = "3">
+            landmarkName = "convertToTitle(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "373"
             endingLineNumber = "373"
-            landmarkName = "merge(_:_:_:_:)"
+            landmarkName = "isSameTree(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
