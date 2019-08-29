@@ -70,6 +70,10 @@ class MinStack {
 
 
 class Solution {
+    func majorityElement(_ nums: [Int]) -> Int {
+        return nums.sorted { $0 < $1 }[nums.count>>1]
+    }
+    
     func convertToTitle(_ n: Int) -> String {
         let numberToChar: [Int: String] = [1 : "A", 2 : "B", 3 : "C",
                                            4 : "D", 5 : "E", 6 : "F",
