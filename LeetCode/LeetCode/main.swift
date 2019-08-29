@@ -87,11 +87,13 @@ class Solution {
         var number: Int = n
         var result: String = ""
         while number > 0 {
-            number -= 1
-            let index: Int = (number % 26) + 1
-            result = (numberToChar[index] ?? "") + result
-            if number < 26 { break }
+            var index: Int = number % 26
             number = number / 26
+            if index == 0 {
+                index = 26
+                number -= 1
+            }
+            result = (numberToChar[index] ?? "") + result
         }
         return result
     }
