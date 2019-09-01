@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "majorityElement(_:)"
+            landmarkName = "trailingZeroes(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "373"
             endingLineNumber = "373"
-            landmarkName = "isSameTree(_:_:)"
+            landmarkName = "getTreeNode(_:array:isLeft:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

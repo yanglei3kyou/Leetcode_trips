@@ -70,6 +70,10 @@ class MinStack {
 
 
 class Solution {
+    func trailingZeroes(_ n: Int) -> Int {
+        return n >= 5 ? (n/5) + trailingZeroes(n/5) : 0
+    }
+    
     func titleToNumber(_ s: String) -> Int {
         let charToNumber: [String: Int] = ["A": 1 , "B": 2 , "C": 3 ,
                                            "D": 4 , "E": 5 , "F": 6 ,
