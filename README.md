@@ -43,3 +43,4 @@ The practice of leetcode in SINA Comic BJ
 - L169 Majority Element
 - L171 Excel Sheet Column Number
 - L172 Factorial Trailing Zeroes
+- L175 Combine Two Tables
