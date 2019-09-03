@@ -70,6 +70,19 @@ class MinStack {
 
 
 class Solution {
+    func rotate(_ nums: inout [Int], _ k: Int) {
+        guard nums.count > 0 else { return }
+        let offset: Int = k % nums.count
+        var squeue: [Int] = []
+        let count: Int = nums.count
+        for i in 0..<count {
+            let index: Int = (count - offset + i) % count
+            squeue.append(nums[index])
+        }
+        nums.removeAll()
+        nums.append(contentsOf: squeue)
+    }
+    
     func trailingZeroes(_ n: Int) -> Int {
         return n >= 5 ? (n/5) + trailingZeroes(n/5) : 0
     }

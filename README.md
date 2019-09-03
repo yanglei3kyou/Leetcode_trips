@@ -44,3 +44,4 @@ The practice of leetcode in SINA Comic BJ
 - L171 Excel Sheet Column Number
 - L172 Factorial Trailing Zeroes
 - L175 Combine Two Tables
+- L189 Rotate Array
