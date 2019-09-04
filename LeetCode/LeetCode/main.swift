@@ -70,6 +70,18 @@ class MinStack {
 
 
 class Solution {
+    func reverseBits(_ n: UInt32) -> UInt32 {
+        var num: UInt32 = n
+        var res: UInt32 = 0
+        for _ in 0..<32 {
+            res = (res << 1) | (num & 1)
+            num = num >> 1
+        }
+        return res
+    }
+    
+
+    
     func rotate(_ nums: inout [Int], _ k: Int) {
         guard nums.count > 0 else { return }
         let offset: Int = k % nums.count
@@ -474,5 +486,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isPalindrome("OP")
+var result = solutionFunc.reverseBits(2)
 print(result)

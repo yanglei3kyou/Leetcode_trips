@@ -45,3 +45,4 @@ The practice of leetcode in SINA Comic BJ
 - L172 Factorial Trailing Zeroes
 - L175 Combine Two Tables
 - L189 Rotate Array
+- L190 Reverse Bits
