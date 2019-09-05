@@ -70,6 +70,20 @@ class MinStack {
 
 
 class Solution {
+    
+    func hammingWeight(_ n: UInt32) -> Int {
+        var num: UInt32 = n
+        var count: Int = 0
+        for _ in 0..<32 {
+            if (num & 1) != 0 {
+                count += 1
+            }
+            num = num >> 1
+        }
+        return count
+    }
+    
+    
     func reverseBits(_ n: UInt32) -> UInt32 {
         var num: UInt32 = n
         var res: UInt32 = 0
