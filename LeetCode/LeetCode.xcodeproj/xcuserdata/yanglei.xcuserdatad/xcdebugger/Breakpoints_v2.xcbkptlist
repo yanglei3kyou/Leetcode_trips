@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "rotate(_:_:)"
-            landmarkType = "7">
+            landmarkName = "Solution"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "385"
             endingLineNumber = "385"
-            landmarkName = "getTreeNode(_:array:isLeft:)"
+            landmarkName = "isSymmetric(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

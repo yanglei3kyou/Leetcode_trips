@@ -71,6 +71,18 @@ class MinStack {
 
 class Solution {
     
+    func rob(_ nums: [Int]) -> Int {
+        var prevMax: Int = 0
+        var currMax: Int = 0
+        for num in nums {
+            let temp = currMax
+            currMax = max(prevMax + num, currMax)
+            prevMax = temp
+        }
+        return currMax
+    }
+    
+    
     func hammingWeight(_ n: UInt32) -> Int {
         var num: UInt32 = n
         var count: Int = 0
