@@ -70,6 +70,27 @@ class MinStack {
 
 
 class Solution {
+    func bitSquareSum(_ n: Int) -> Int {
+        var sum: Int = 0
+        var num: Int = n
+        while num > 0 {
+            let bit: Int = num % 10
+            sum += (bit * bit)
+            num /= 10
+        }
+        return sum
+    }
+    
+    func isHappy(_ n: Int) -> Bool {
+        var slow: Int = n
+        var fast: Int = bitSquareSum(n)
+        while slow != fast {
+            slow = bitSquareSum(slow)
+            fast = bitSquareSum(fast)
+            fast = bitSquareSum(fast)
+        }
+        return slow == 1
+    }
     
     func rob(_ nums: [Int]) -> Int {
         var prevMax: Int = 0
