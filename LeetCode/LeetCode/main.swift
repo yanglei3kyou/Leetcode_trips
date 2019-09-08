@@ -70,6 +70,20 @@ class MinStack {
 
 
 class Solution {
+    func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+        let result: ListNode? = ListNode(0)
+        var curr: ListNode? = result
+        var node: ListNode? = head
+        while node != nil {
+            if node!.val != val {
+                curr?.next = ListNode(node!.val)
+                curr = curr?.next
+            }
+            node = node?.next
+        }
+        return result?.next
+    }
+    
     func bitSquareSum(_ n: Int) -> Int {
         var sum: Int = 0
         var num: Int = n
