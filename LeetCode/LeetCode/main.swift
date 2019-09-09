@@ -70,6 +70,26 @@ class MinStack {
 
 
 class Solution {
+    func countPrimes(_ n: Int) -> Int {
+        guard n > 2 else { return 0 }
+        var count: Int = 1
+        for i in 3..<n {
+            if i & 1 == 0 { continue }
+            var sign: Bool = true
+            
+            var j = 3
+            while j * j <= i {
+                if i % j == 0 {
+                    sign = false
+                    break
+                }
+                j += 2
+            }
+            if sign { count += 1 }
+        }
+        return count
+    }
+    
     func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
         let result: ListNode? = ListNode(0)
         var curr: ListNode? = result
