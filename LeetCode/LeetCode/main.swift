@@ -70,6 +70,28 @@ class MinStack {
 
 
 class Solution {
+    func isIsomorphic(_ s: String, _ t: String) -> Bool {
+        guard s.count == t.count else { return false }
+        let sChars: [Character] = s.reversed().reversed()
+        let tChars: [Character] = t.reversed().reversed()
+        var stMap: [Character: Character] = [Character: Character]()
+        for (index, item) in sChars.enumerated() {
+            if let storeC = stMap[item] {
+                if storeC == tChars[index] {
+                    continue
+                } else {
+                    return false
+                }
+            } else {
+                if stMap.values.contains(tChars[index]) {
+                    return false
+                }
+                stMap[item] = tChars[index]
+            }
+        }
+        return true
+    }
+    
     func countPrimes(_ n: Int) -> Int {
         guard n > 2 else { return 0 }
         var count: Int = 1
@@ -567,5 +589,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.reverseBits(2)
+var result = solutionFunc.isIsomorphic("ab", "aa")
 print(result)

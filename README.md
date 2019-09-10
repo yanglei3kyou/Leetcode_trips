@@ -51,3 +51,4 @@ The practice of leetcode in SINA Comic BJ
 - L202 Happy Number
 - L203 Remove Linked List Elements
 - L204 Count Primes
+- L205 Isomorphic Strings
