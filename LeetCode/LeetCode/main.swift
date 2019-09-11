@@ -70,6 +70,39 @@ class MinStack {
 
 
 class Solution {
+    // 1 2 3 4 5
+    func reverseList(_ head: ListNode?) -> ListNode? {
+        guard head != nil && head?.next != nil else { return head }
+        let p = reverseList(head?.next)
+        head?.next?.next = head
+        head?.next = nil
+        return p
+    }
+    
+    func reverseList1(_ head: ListNode?) -> ListNode? {
+        var prev: ListNode? = nil
+        var curr: ListNode? = head
+        while curr != nil {
+            let next = curr?.next
+            curr?.next = prev
+            prev = curr
+            curr = next
+        }
+        return prev
+    }
+    
+    func reverseList1(_ head: ListNode?) -> ListNode? {
+        let result: ListNode = ListNode(-1)
+        var tmp: ListNode? = head
+        while tmp != nil {
+            let node = ListNode(tmp!.val)
+            node.next = result.next
+            result.next = node
+            tmp = tmp?.next
+        }
+        return result.next
+    }
+    
     func isIsomorphic(_ s: String, _ t: String) -> Bool {
         guard s.count == t.count else { return false }
         let sChars: [Character] = s.reversed().reversed()
