@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "isIsomorphic(_:_:)"
+            landmarkName = "reverseList1(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "404"
             endingLineNumber = "404"
-            landmarkName = "depth(_:)"
+            landmarkName = "minDepth(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

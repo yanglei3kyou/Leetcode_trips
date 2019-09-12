@@ -70,6 +70,33 @@ class MinStack {
 
 
 class Solution {
+    
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        let sortNums: [Int] = nums.sorted()
+        for (index, num) in sortNums.enumerated() {
+            if index + 1 < sortNums.count, num == sortNums[index+1] {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func containsDuplicate2(_ nums: [Int]) -> Bool {
+        return Set(nums).count != nums.count
+    }
+    
+    func containsDuplicate1(_ nums: [Int]) -> Bool {
+        var numsMap: [Int: Bool] = [Int: Bool]()
+        for num in nums {
+            if let result = numsMap[num], result == true {
+                return true
+            } else {
+                numsMap[num] = true
+            }
+        }
+        return false
+    }
+    
     // 1 2 3 4 5
     func reverseList(_ head: ListNode?) -> ListNode? {
         guard head != nil && head?.next != nil else { return head }
@@ -91,7 +118,7 @@ class Solution {
         return prev
     }
     
-    func reverseList1(_ head: ListNode?) -> ListNode? {
+    func reverseList2(_ head: ListNode?) -> ListNode? {
         let result: ListNode = ListNode(-1)
         var tmp: ListNode? = head
         while tmp != nil {
