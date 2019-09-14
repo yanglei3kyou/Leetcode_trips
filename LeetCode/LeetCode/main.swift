@@ -71,6 +71,27 @@ class MinStack {
 
 class Solution {
     
+    func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
+        var valuesInK: Set<Int> = Set<Int>()
+        for (index, value) in nums.enumerated() {
+            if valuesInK.contains(value) { return true }
+            valuesInK.insert(value)
+            if valuesInK.count > k { valuesInK.remove(nums[index-k]) }
+        }
+        return false
+    }
+    
+    func containsNearbyDuplicate1(_ nums: [Int], _ k: Int) -> Bool {
+        var valueIndexMap: [Int: Int] = [:]
+        for (index, value) in nums.enumerated() {
+            if let preIndex = valueIndexMap[value], index - preIndex <= k {
+                return true
+            }
+            valueIndexMap[value] = index
+        }
+        return false
+    }
+    
     func containsDuplicate(_ nums: [Int]) -> Bool {
         let sortNums: [Int] = nums.sorted()
         for (index, num) in sortNums.enumerated() {
@@ -649,5 +670,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isIsomorphic("ab", "aa")
+var result = solutionFunc.containsNearbyDuplicate([1,2,3,1,2,3], 2)
 print(result)
