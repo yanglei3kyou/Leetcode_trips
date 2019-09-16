@@ -95,6 +95,31 @@ class MinStack {
 
 class Solution {
     
+    func invertTree(_ root: TreeNode?) -> TreeNode? {
+        guard let root = root else { return nil }
+        var array: [TreeNode] = [root]
+        
+        while array.count != 0 {
+            let node: TreeNode = array.removeFirst()
+            let left: TreeNode? = node.left
+            let right: TreeNode? = node.right
+            node.left = right
+            node.right = left
+            if let right = right { array.append(right) }
+            if let left = left { array.append(left) }
+        }
+        return root
+    }
+    
+    func invertTree1(_ root: TreeNode?) -> TreeNode? {
+        guard root != nil else { return nil }
+        let left: TreeNode? = root?.left
+        let right: TreeNode? = root?.right
+        root?.left = invertTree(right)
+        root?.right = invertTree(left)
+        return root
+    }
+    
     func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
         var valuesInK: Set<Int> = Set<Int>()
         for (index, value) in nums.enumerated() {
