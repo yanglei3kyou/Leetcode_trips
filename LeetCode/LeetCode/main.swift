@@ -94,6 +94,20 @@ class MinStack {
 
 
 class Solution {
+    func isPowerOfTwo(_ n: Int) -> Bool {
+        return n > 0 && (n & (n - 1) == 0)
+    }
+    
+    func isPowerOfTwo1(_ n: Int) -> Bool {
+        guard n > 0 else { return false }
+        var num: Int = n
+        var oneCount: Int = 0
+        while num != 0 {
+            if num & 1 != 0 { oneCount += 1 }
+            num = num >> 1
+        }
+        return oneCount == 1
+    }
     
     func invertTree(_ root: TreeNode?) -> TreeNode? {
         guard let root = root else { return nil }
@@ -719,5 +733,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.containsNearbyDuplicate([1,2,3,1,2,3], 2)
+var result = solutionFunc.isPowerOfTwo(-8)
 print(result)

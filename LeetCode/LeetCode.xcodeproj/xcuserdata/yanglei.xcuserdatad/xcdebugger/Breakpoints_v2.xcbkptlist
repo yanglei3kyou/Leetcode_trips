@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "590124743.030807"
+            timestampString = "590372319.161922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "containsNearbyDuplicate1(_:_:)"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "containsNearbyDuplicate(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "590124743.031186"
+            timestampString = "590372319.162335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "generate(_:numRows:result:)"
-            landmarkType = "7">
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "Solution"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode/main.swift"
+            timestampString = "590372390.709065"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "738"
+            endingLineNumber = "738">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

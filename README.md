@@ -57,3 +57,4 @@ The practice of leetcode in SINA Comic BJ
 - L219 Contains Duplicate II
 - L225 Implement Stack using Queues
 - L226 Invert Binary Tree
+- L231 Power of Two
