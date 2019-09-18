@@ -58,3 +58,4 @@ The practice of leetcode in SINA Comic BJ
 - L225 Implement Stack using Queues
 - L226 Invert Binary Tree
 - L231 Power of Two
+- L232 Implement Queue using Stacks

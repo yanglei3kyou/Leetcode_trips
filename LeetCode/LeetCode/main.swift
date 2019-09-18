@@ -92,6 +92,39 @@ class MinStack {
     }
 }
 
+class MyQueue {
+    
+    fileprivate var stack1: [Int] = []
+    fileprivate var stack2: [Int] = []
+    fileprivate var front: Int = 0
+    init() { }
+    
+    /** Push element x to the back of queue. */
+    func push(_ x: Int) {
+        if stack1.isEmpty { front = x }
+        stack1.append(x)
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    func pop() -> Int {
+        if stack2.isEmpty {
+            while stack1.isEmpty == false {
+                stack2.append(stack1.removeLast())
+            }
+        }
+        return stack2.popLast() ?? 0
+    }
+    
+    /** Get the front element. */
+    func peek() -> Int {
+        if stack2.isEmpty == false { return stack2.last ?? 0 }
+        return front
+    }
+    
+    /** Returns whether the queue is empty. */
+    func empty() -> Bool { return stack1.isEmpty && stack2.isEmpty }
+}
+
 
 class Solution {
     func isPowerOfTwo(_ n: Int) -> Bool {
