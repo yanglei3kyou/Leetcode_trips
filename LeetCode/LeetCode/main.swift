@@ -127,6 +127,41 @@ class MyQueue {
 
 
 class Solution {
+    func isPalindrome(_ head: ListNode?) -> Bool {
+        guard head?.next != nil else { return true }
+        var head: ListNode? = head
+        var mid: ListNode? = head
+        var pre: ListNode? = nil
+        var reversed: ListNode? = nil
+        
+        while head != nil && head?.next != nil {
+            pre = mid
+            mid = mid?.next
+            head = head?.next?.next
+            
+            pre?.next = reversed
+            reversed = pre
+        }
+        
+        if head != nil { mid = mid?.next }
+        
+        while mid != nil {
+            if let reverValue = reversed?.val, let value = mid?.val, reverValue != value { return false }
+            reversed = reversed?.next
+            mid = mid?.next
+        }
+        
+        return true
+    }
+    
+    func reverseList(_ head: ListNode?) -> ListNode? {
+        guard head != nil && head?.next != nil else { return head }
+        let p = reverseList(head?.next)
+        head?.next?.next = head
+        head?.next = nil
+        return p
+    }
+    
     func isPowerOfTwo(_ n: Int) -> Bool {
         return n > 0 && (n & (n - 1) == 0)
     }
@@ -214,14 +249,7 @@ class Solution {
         return false
     }
     
-    // 1 2 3 4 5
-    func reverseList(_ head: ListNode?) -> ListNode? {
-        guard head != nil && head?.next != nil else { return head }
-        let p = reverseList(head?.next)
-        head?.next?.next = head
-        head?.next = nil
-        return p
-    }
+
     
     func reverseList1(_ head: ListNode?) -> ListNode? {
         var prev: ListNode? = nil
@@ -735,15 +763,15 @@ class Solution {
 
 var solutionFunc = Solution.init()
 
-let a = ListNode(1)
-let b = ListNode(1)
+let a = ListNode(0)
+let b = ListNode(0)
 let c = ListNode(2)
 let d = ListNode(2)
 let e = ListNode(3)
 let f = ListNode(4)
 
 a.next = b
-b.next = c
+b.next = nil
 c.next = d
 d.next = e
 e.next = f
@@ -766,5 +794,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isPowerOfTwo(-8)
+var result = solutionFunc.isPalindrome(a)
 print(result)
