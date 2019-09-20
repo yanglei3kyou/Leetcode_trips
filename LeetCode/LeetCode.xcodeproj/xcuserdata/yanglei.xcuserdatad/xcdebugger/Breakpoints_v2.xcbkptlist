@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
             endingLineNumber = "164"
-            landmarkName = "isPowerOfTwo1(_:)"
+            landmarkName = "isPalindrome(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "457"
             endingLineNumber = "457"
-            landmarkName = "twoSum(_:_:)"
+            landmarkName = "convertToTitle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "755"
             endingLineNumber = "755"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "merge(_:_:_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

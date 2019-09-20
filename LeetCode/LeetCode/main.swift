@@ -127,6 +127,21 @@ class MyQueue {
 
 
 class Solution {
+    func lowestCommonAncestor(_ root: TreeNode?, p: TreeNode?, q: TreeNode?) -> TreeNode? {
+        let parentVal = root?.val ?? 0
+        let pVal = p?.val ?? 0
+        let qVal = q?.val ?? 0
+        
+        if pVal > parentVal && qVal > parentVal {
+            return lowestCommonAncestor(root?.right, p: p, q: q)
+        } else if pVal < parentVal && qVal < parentVal {
+            return lowestCommonAncestor(root?.left, p: p, q: q)
+        } else {
+            return root
+        }
+    }
+    
+    
     func isPalindrome(_ head: ListNode?) -> Bool {
         guard head?.next != nil else { return true }
         var head: ListNode? = head
