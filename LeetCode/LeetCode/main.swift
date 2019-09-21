@@ -127,6 +127,11 @@ class MyQueue {
 
 
 class Solution {
+    func deleteNode(_ node: ListNode?) {
+        node?.val = node?.next?.val ?? 0
+        node?.next = node?.next?.next
+    }
+    
     func lowestCommonAncestor(_ root: TreeNode?, p: TreeNode?, q: TreeNode?) -> TreeNode? {
         let parentVal = root?.val ?? 0
         let pVal = p?.val ?? 0
