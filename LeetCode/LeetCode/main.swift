@@ -127,6 +127,20 @@ class MyQueue {
 
 
 class Solution {
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return s.sorted() == t.sorted()
+    }
+    
+    func isAnagram1(_ s: String, _ t: String) -> Bool {
+        guard s.count == t.count else { return false }
+        var sInfos: [Character: Int] = [:]
+        var tInfos: [Character: Int] = [:]
+        for (_, item) in s.enumerated() { sInfos[item] = (sInfos[item] ?? 0) + 1 }
+        for (_, item) in t.enumerated() { tInfos[item] = (tInfos[item] ?? 0) + 1 }
+        for (_, item) in sInfos.enumerated() { if tInfos[item.key] != item.value { return false } }
+        return true
+    }
+    
     func deleteNode(_ node: ListNode?) {
         node?.val = node?.next?.val ?? 0
         node?.next = node?.next?.next
