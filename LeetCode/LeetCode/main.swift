@@ -127,6 +127,15 @@ class MyQueue {
 
 
 class Solution {
+    func binaryTreePaths(_ root: TreeNode?) -> [String] {
+        guard let root = root else { return [] }
+        var result: [String] = []
+        result.append(contentsOf: binaryTreePaths(root.left) .map({ "\(root.val)->\($0)" }))
+        result.append(contentsOf: binaryTreePaths(root.right).map({ "\(root.val)->\($0)" }))
+        if result.isEmpty { result.append("\(root.val)") }
+        return result
+    }
+    
     func isAnagram(_ s: String, _ t: String) -> Bool {
         return s.sorted() == t.sorted()
     }

@@ -63,3 +63,4 @@ The practice of leetcode in SINA Comic BJ
 - L235 Lowest Common Ancestor of a Binary Search Tree
 - L237 Delete Node in a Linked List
 - L242 Valid Anagram
+- L257 Binary Tree Paths
