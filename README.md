@@ -65,3 +65,4 @@ The practice of leetcode in SINA Comic BJ
 - L242 Valid Anagram
 - L257 Binary Tree Paths
 - L258 Add Digits
+- L263 Ugly Number
