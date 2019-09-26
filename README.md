@@ -66,3 +66,4 @@ The practice of leetcode in SINA Comic BJ
 - L257 Binary Tree Paths
 - L258 Add Digits
 - L263 Ugly Number
+- L268 Missing Number
