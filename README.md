@@ -67,3 +67,4 @@ The practice of leetcode in SINA Comic BJ
 - L258 Add Digits
 - L263 Ugly Number
 - L268 Missing Number
+- L278 First Bad Version
