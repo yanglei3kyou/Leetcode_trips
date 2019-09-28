@@ -127,6 +127,18 @@ class MyQueue {
 
 
 class Solution {
+    func moveZeroes(_ nums: inout [Int]) {
+        var lastNotZeroFoundAt: Int = 0
+        for (index, item) in nums.enumerated() {
+            if item != 0 {
+                let tmp = nums[lastNotZeroFoundAt]
+                nums[lastNotZeroFoundAt] = item
+                nums[index] = tmp
+                lastNotZeroFoundAt += 1
+            }
+        }
+    }
+    
     func binaryTreePaths(_ root: TreeNode?) -> [String] {
         guard let root = root else { return [] }
         var result: [String] = []
