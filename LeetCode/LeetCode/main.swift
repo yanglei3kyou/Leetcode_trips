@@ -127,6 +127,25 @@ class MyQueue {
 
 
 class Solution {
+    func wordPattern(_ pattern: String, _ str: String) -> Bool {
+        let strArray = str.split(separator: " ")
+        guard pattern.count == strArray.count else { return false }
+        var mapRecord: [Character: Substring] = [:]
+        for (index, item) in pattern.enumerated() {
+            if let value = mapRecord[item] {
+                if value != strArray[index] { return false }
+            } else {
+                let str = strArray[index]
+                if mapRecord.values.contains(str) == false {
+                    mapRecord[item] = str
+                } else {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
     func moveZeroes(_ nums: inout [Int]) {
         var lastNotZeroFoundAt: Int = 0
         for (index, item) in nums.enumerated() {

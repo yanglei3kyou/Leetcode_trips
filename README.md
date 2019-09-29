@@ -69,3 +69,4 @@ The practice of leetcode in SINA Comic BJ
 - L268 Missing Number
 - L278 First Bad Version
 - L283 Move Zeroes
+- L290 Word Pattern
