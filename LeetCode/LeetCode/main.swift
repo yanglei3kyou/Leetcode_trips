@@ -127,6 +127,10 @@ class MyQueue {
 
 
 class Solution {
+    func canWinNim(_ n: Int) -> Bool {
+        return (n & 3) != 0
+    }
+    
     func wordPattern(_ pattern: String, _ str: String) -> Bool {
         let strArray = str.split(separator: " ")
         guard pattern.count == strArray.count else { return false }
