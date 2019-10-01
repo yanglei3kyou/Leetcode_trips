@@ -127,6 +127,37 @@ class MyQueue {
 
 
 class Solution {
+    func getHint(_ secret: String, _ guess: String) -> String {
+        var secret = secret
+        var guess = guess
+        
+        var aCount: Int = 0
+        var charArray: [Character] = []
+        var waitCompareArray: [Character] = []
+        
+        while let aChar = secret.first, let bChar = guess.first{
+            if aChar == bChar {
+                aCount += 1
+            } else {
+                charArray.append(aChar)
+                waitCompareArray.append(bChar)
+            }
+            secret.removeFirst()
+            guess.removeFirst()
+        }
+        
+        
+        var bCount: Int = 0
+        while let compareChar = waitCompareArray.first {
+            if let index = charArray.firstIndex(of: compareChar) {
+                bCount += 1
+                charArray.remove(at: index)
+            }
+            waitCompareArray.removeFirst()
+        }
+        return "\(aCount)A\(bCount)B"
+    }
+    
     func canWinNim(_ n: Int) -> Bool {
         return (n & 3) != 0
     }

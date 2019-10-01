@@ -71,3 +71,4 @@ The practice of leetcode in SINA Comic BJ
 - L283 Move Zeroes
 - L290 Word Pattern
 - L292 Nim Game
+- L299 Bulls and Cows
