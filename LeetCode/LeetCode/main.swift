@@ -127,6 +127,35 @@ class MyQueue {
 
 
 class Solution {
+    // 0   000      1   001     3 - 1  =   2     0010
+    /*
+     0   0000
+     1   0001
+     2   0010
+     3   0011
+     4   0100
+     5   0101
+     6   0110
+     7   0111
+     */
+    func isPowerOfThree(_ n: Int) -> Bool {
+        guard n > 0 else { return false }
+        var num: Int = n
+        while num % 3 == 0 { num /= 3 }
+        return num == 1
+    }
+    
+    func isPowerOfThree1(_ n: Int) -> Bool {
+        guard n > 0 else { return false }
+        var num: Int = n
+        while num != 0 {
+            if num == 1 { return true }
+            if num % 3 != 0 { return false }
+            num /= 3
+        }
+        return true
+    }
+    
     class NumArray {
         fileprivate var sumMap: [Int: Int] = [:]
         init(_ nums: [Int]) {

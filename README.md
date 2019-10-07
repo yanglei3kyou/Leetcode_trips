@@ -73,3 +73,4 @@ The practice of leetcode in SINA Comic BJ
 - L292 Nim Game
 - L299 Bulls and Cows
 - L303 Range Sum Query - Immutable
+- L326 Power of Three

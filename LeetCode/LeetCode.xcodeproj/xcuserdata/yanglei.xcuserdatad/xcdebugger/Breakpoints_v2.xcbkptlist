@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "467"
             endingLineNumber = "467"
-            landmarkName = "bitSquareSum(_:)"
+            landmarkName = "removeElements(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "765"
             endingLineNumber = "765"
-            landmarkName = "levelOrderBottom(_:depth:result:)"
+            landmarkName = "sortedArrayToBST(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
