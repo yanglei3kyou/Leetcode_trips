@@ -72,3 +72,4 @@ The practice of leetcode in SINA Comic BJ
 - L290 Word Pattern
 - L292 Nim Game
 - L299 Bulls and Cows
+- L303 Range Sum Query - Immutable

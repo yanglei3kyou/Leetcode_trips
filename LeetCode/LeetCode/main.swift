@@ -127,6 +127,19 @@ class MyQueue {
 
 
 class Solution {
+    class NumArray {
+        fileprivate var sumMap: [Int: Int] = [:]
+        init(_ nums: [Int]) {
+            for (index, num) in nums.enumerated() {
+                sumMap[index + 1] = num + (sumMap[index] ?? 0)
+            }
+        }
+        
+        func sumRange(_ i: Int, _ j: Int) -> Int {
+            return (sumMap[j + 1] ?? 0) - (sumMap[i] ?? 0)
+        }
+    }
+    
     func getHint(_ secret: String, _ guess: String) -> String {
         var secret = secret
         var guess = guess
