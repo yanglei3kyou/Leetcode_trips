@@ -127,6 +127,19 @@ class MyQueue {
 
 
 class Solution {
+    func isPowerOfFour(_ num: Int) -> Bool {
+        guard num > 0, num & (num - 1) == 0 else { return false }
+        return (num & 0x55555555) != 0
+    }
+    
+    // 0x0010000
+    func isPowerOfFour1(_ num: Int) -> Bool {
+        guard num > 0 else { return false }
+        var n: Int = num
+        while n & 3 == 0 { n = n >> 2 }
+        return n == 1
+    }
+    
     // 0   000      1   001     3 - 1  =   2     0010
     /*
      0   0000
@@ -945,5 +958,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isPalindrome(a)
+var result = solutionFunc.isPowerOfFour(16)
 print(result)
