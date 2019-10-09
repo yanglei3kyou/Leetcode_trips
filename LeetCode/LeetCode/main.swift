@@ -127,6 +127,31 @@ class MyQueue {
 
 
 class Solution {
+    func reverseString(_ s: inout [Character]) {
+        var left : Int = 0
+        var right: Int = s.count - 1
+        var tmp: Character
+        
+        while left < right {
+            tmp = s[left]
+            s[left] = s[right]
+            s[right] = tmp
+            left += 1
+            right -= 1
+        }
+    }
+    
+    func reverseString1(_ s: inout [Character]) {
+        guard s.count > 0 else { return }
+        let count: Int = s.count
+        var tmp: Character = s.first!
+        for index in 0..<(count >> 1) {
+            tmp = s[index]
+            s[index] = s[count - index - 1]
+            s[count - index - 1] = tmp
+        }
+    }
+    
     func isPowerOfFour(_ num: Int) -> Bool {
         guard num > 0, num & (num - 1) == 0 else { return false }
         return (num & 0x55555555) != 0
@@ -958,5 +983,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isPowerOfFour(16)
+var result = solutionFunc.isSymmetric(tree1)
 print(result)
