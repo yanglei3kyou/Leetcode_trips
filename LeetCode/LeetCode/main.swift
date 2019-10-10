@@ -127,6 +127,33 @@ class MyQueue {
 
 
 class Solution {
+    func reverseVowels(_ s: String) -> String {
+        var chars: [Character] = []
+        var vowelIndex: [Int] = []
+        for (index, item) in s.enumerated() {
+            chars.append(item)
+            if item == "a" || item == "e" || item == "i" || item == "o" || item == "u" ||
+               item == "A" || item == "E" || item == "I" || item == "O" || item == "U" {
+                vowelIndex.append(index)
+            }
+        }
+        
+        var left : Int = 0
+        var right: Int = vowelIndex.count - 1
+        var tmp: Character
+        
+        while left < right {
+            tmp = chars[vowelIndex[left]]
+            chars[vowelIndex[left]] = chars[vowelIndex[right]]
+            chars[vowelIndex[right]] = tmp
+            
+            left  += 1
+            right -= 1
+        }
+        
+        return String(chars)
+    }
+    
     func reverseString(_ s: inout [Character]) {
         var left : Int = 0
         var right: Int = s.count - 1
@@ -983,5 +1010,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.isSymmetric(tree1)
+var result = solutionFunc.reverseVowels("leetcode")
 print(result)
