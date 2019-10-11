@@ -77,3 +77,4 @@ The practice of leetcode in SINA Comic BJ
 - L342 Power of Four
 - L344 Reverse String
 - L345 Reverse Vowels of a String
+- L349 Intersection of Two Arrays

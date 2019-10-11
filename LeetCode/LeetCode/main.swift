@@ -127,6 +127,11 @@ class MyQueue {
 
 
 class Solution {
+    func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        let resultSet: Set<Int> = Set<Int>(nums1).intersection(nums2)
+        return Array<Int>(resultSet)
+    }
+    
     func reverseVowels(_ s: String) -> String {
         var chars: [Character] = []
         var vowelIndex: [Int] = []

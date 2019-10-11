@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
-            landmarkName = "isPowerOfThree1(_:)"
+            landmarkName = "isPowerOfThree(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "806"
             endingLineNumber = "806"
-            landmarkName = "MyTreeNode"
+            landmarkName = "Solution"
             landmarkType = "3">
             <Locations>
                <Location
