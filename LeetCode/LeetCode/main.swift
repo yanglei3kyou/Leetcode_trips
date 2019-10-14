@@ -127,6 +127,41 @@ class MyQueue {
 
 
 class Solution {
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        var result: [Int] = []
+        var mapInfo: [Int: Int] = [:]
+        for num in nums1 { mapInfo[num] = (mapInfo[num] ?? 0) + 1 }
+        for num in nums2 {
+            if let count = mapInfo[num], count > 0 {
+                mapInfo[num] = count - 1
+                result.append(num)
+            }
+        }
+        return result
+    }
+    
+    func intersect1(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        var result: [Int] = []
+        var minSortedNums: [Int] = nums1.count <  nums2.count ? nums1.sorted() : nums2.sorted()
+        var maxSortedNums: [Int] = nums1.count >= nums2.count ? nums1.sorted() : nums2.sorted()
+        
+        var minI: Int = 0
+        var maxI: Int = 0
+        
+        while minI < minSortedNums.count, maxI < maxSortedNums.count {
+            if minSortedNums[minI] == maxSortedNums[maxI] {
+                result.append(minSortedNums[minI])
+                minI += 1
+                maxI += 1
+            } else if minSortedNums[minI] < maxSortedNums[maxI] {
+                minI += 1
+            } else if minSortedNums[minI] > maxSortedNums[maxI] {
+                maxI += 1
+            }
+        }
+        return result
+    }
+    
     func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         let resultSet: Set<Int> = Set<Int>(nums1).intersection(nums2)
         return Array<Int>(resultSet)
@@ -1015,5 +1050,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.reverseVowels("leetcode")
+var result = solutionFunc.intersect([4,9,5], [9,4,9,8,4])
 print(result)

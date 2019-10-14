@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "592360564.544755"
+            timestampString = "592706338.699819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "isPowerOfThree(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "592360564.5451829"
+            timestampString = "592706338.700237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "isIsomorphic(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,45 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "592360564.545431"
+            timestampString = "592706338.700496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "806"
-            endingLineNumber = "806"
+            startingLineNumber = "846"
+            endingLineNumber = "846"
             landmarkName = "Solution"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeetCode.Solution.MyTreeNode.__allocating_init(_: LeetCode.TreeNode, start: Swift.Int, end: Swift.Int) -&gt; LeetCode.Solution.MyTreeNode"
-                  moduleName = "LeetCode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanglei/Desktop/Leetcode_trips/LeetCode/LeetCode/main.swift"
-                  timestampString = "592360565.984647"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeetCode.Solution.MyTreeNode.init(_: LeetCode.TreeNode, start: Swift.Int, end: Swift.Int) -&gt; LeetCode.Solution.MyTreeNode"
-                  moduleName = "LeetCode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanglei/Desktop/Leetcode_trips/LeetCode/LeetCode/main.swift"
-                  timestampString = "592360565.987205"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "808"
-                  endingLineNumber = "808"
-                  offsetFromSymbolStart = "59">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeetCode/main.swift"
-            timestampString = "592360647.755047"
+            timestampString = "592706338.7007509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "reverseVowels(_:)"
             landmarkType = "7">
          </BreakpointContent>
