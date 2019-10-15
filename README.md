@@ -79,3 +79,4 @@ The practice of leetcode in SINA Comic BJ
 - L345 Reverse Vowels of a String
 - L349 Intersection of Two Arrays
 - L350 Intersection of Two Arrays II
+- L367 Valid Perfect Square

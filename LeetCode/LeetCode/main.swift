@@ -127,6 +127,41 @@ class MyQueue {
 
 
 class Solution {
+    func isPerfectSquare(_ num: Int) -> Bool {
+        var start: Int = 1
+        var end: Int = num
+        var mid: Int = start + (end - start) / 2
+        while start <= end {
+            if mid * mid > num {
+                end = mid - 1
+            } else if mid * mid < num {
+                start = mid + 1
+            } else {
+                return true
+            }
+            mid = start + (end - start) / 2
+        }
+        return false
+    }
+    
+    func isPerfectSquare2(_ num: Int) -> Bool {
+        var i: Int = 1
+        var tmpNum: Int = num
+        while tmpNum > 0 {
+            tmpNum -= i
+            i += 2
+        }
+        return tmpNum == 0
+    }
+    
+    func isPerfectSquare1(_ num: Int) -> Bool {
+        guard num != 1 else { return true }
+        for i in 0...(num >> 1) {
+            if i * i == num { return true }
+        }
+        return false
+    }
+    
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         var result: [Int] = []
         var mapInfo: [Int: Int] = [:]
