@@ -80,3 +80,4 @@ The practice of leetcode in SINA Comic BJ
 - L349 Intersection of Two Arrays
 - L350 Intersection of Two Arrays II
 - L367 Valid Perfect Square
+- L371 Sum of Two Integers

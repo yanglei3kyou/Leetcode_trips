@@ -127,6 +127,18 @@ class MyQueue {
 
 
 class Solution {
+    func getSum(_ a: Int, _ b: Int) -> Int {
+        var sum: Int = a
+        var other: Int = b
+        var carry: Int = 0
+        while other != 0 {
+            carry = (sum & other) << 1
+            sum = sum ^ other
+            other = carry
+        }
+        return sum
+    }
+    
     func isPerfectSquare(_ num: Int) -> Bool {
         var start: Int = 1
         var end: Int = num
