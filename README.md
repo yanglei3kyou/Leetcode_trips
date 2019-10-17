@@ -81,3 +81,4 @@ The practice of leetcode in SINA Comic BJ
 - L350 Intersection of Two Arrays II
 - L367 Valid Perfect Square
 - L371 Sum of Two Integers
+- L374 Guess Number Higher or Lower
