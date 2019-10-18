@@ -82,3 +82,4 @@ The practice of leetcode in SINA Comic BJ
 - L367 Valid Perfect Square
 - L371 Sum of Two Integers
 - L374 Guess Number Higher or Lower
+- L383 Ransom Note

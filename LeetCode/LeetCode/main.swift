@@ -127,6 +127,21 @@ class MyQueue {
 
 
 class Solution {
+    func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
+        guard !ransomNote.isEmpty else { return true }
+        var letterMap: [Character: Int] = [:]
+        for (_, value) in magazine.enumerated() {
+            letterMap[value] = (letterMap[value] ?? 0) + 1
+        }
+        for (_, value) in ransomNote.enumerated() {
+            if let count = letterMap[value], count > 0 {
+                letterMap[value] = count - 1
+            } else {
+                return false
+            }
+        }
+        return true
+    }
     func getSum(_ a: Int, _ b: Int) -> Int {
         var sum: Int = a
         var other: Int = b
@@ -1097,5 +1112,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.intersect([4,9,5], [9,4,9,8,4])
+var result = solutionFunc.canConstruct("aa", "aab")
 print(result)
