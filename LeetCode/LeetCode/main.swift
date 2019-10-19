@@ -127,6 +127,22 @@ class MyQueue {
 
 
 class Solution {
+    func firstUniqChar(_ s: String) -> Int {
+        var charCount: [Character: Int] = [:]
+        var chars: [Character] = []
+        for (_, item) in s.enumerated() {
+            chars.append(item)
+            charCount[item] = (charCount[item] ?? 0) + 1
+        }
+        
+        for (index, item) in chars.enumerated() {
+            if let count = charCount[item], count == 1 {
+                return index
+            }
+        }
+        return -1
+    }
+    
     func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
         guard !ransomNote.isEmpty else { return true }
         var letterMap: [Character: Int] = [:]
