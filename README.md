@@ -84,3 +84,4 @@ The practice of leetcode in SINA Comic BJ
 - L374 Guess Number Higher or Lower
 - L383 Ransom Note
 - L387 First Unique Character in a String
+- L389 Find the Difference

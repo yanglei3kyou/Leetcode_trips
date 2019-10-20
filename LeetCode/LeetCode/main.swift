@@ -127,6 +127,22 @@ class MyQueue {
 
 
 class Solution {
+    func findTheDifference(_ s: String, _ t: String) -> Character {
+        var charInfo: [Character: Int] = [:]
+        for (_, item) in s.enumerated() {
+            charInfo[item] = 1 + (charInfo[item] ?? 0)
+        }
+        
+        for (_, item) in t.enumerated() {
+            if let count = charInfo[item], count > 0 {
+                charInfo[item] = count - 1
+            } else {
+                return item
+            }
+        }
+        return "a"
+    }
+    
     func firstUniqChar(_ s: String) -> Int {
         var charCount: [Character: Int] = [:]
         var chars: [Character] = []

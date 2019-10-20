@@ -58,6 +58,7 @@
 		9581FE8D2357ED6A0038E9BA /* L-374.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581FE8C2357ED6A0038E9BA /* L-374.swift */; };
 		9581FE8F235940610038E9BA /* L-383.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581FE8E235940600038E9BA /* L-383.swift */; };
 		9581FE91235AA9E80038E9BA /* L-387.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581FE90235AA9E80038E9BA /* L-387.swift */; };
+		9581FE95235C65140038E9BA /* L-389.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581FE94235C65140038E9BA /* L-389.swift */; };
 		958A7D4A2304FAD7009E5435 /* L-107.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A7D492304FAD7009E5435 /* L-107.swift */; };
 		958A7D50230665BE009E5435 /* L-108.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A7D4F230665BE009E5435 /* L-108.swift */; };
 		95962C672343663E009A4A92 /* L-299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95962C662343663E009A4A92 /* L-299.swift */; };
@@ -160,6 +161,7 @@
 		9581FE8C2357ED6A0038E9BA /* L-374.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-374.swift"; sourceTree = "<group>"; };
 		9581FE8E235940600038E9BA /* L-383.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-383.swift"; sourceTree = "<group>"; };
 		9581FE90235AA9E80038E9BA /* L-387.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-387.swift"; sourceTree = "<group>"; };
+		9581FE94235C65140038E9BA /* L-389.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-389.swift"; sourceTree = "<group>"; };
 		958A7D492304FAD7009E5435 /* L-107.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-107.swift"; sourceTree = "<group>"; };
 		958A7D4F230665BE009E5435 /* L-108.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-108.swift"; sourceTree = "<group>"; };
 		95962C662343663E009A4A92 /* L-299.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-299.swift"; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				9581FE8C2357ED6A0038E9BA /* L-374.swift */,
 				9581FE8E235940600038E9BA /* L-383.swift */,
 				9581FE90235AA9E80038E9BA /* L-387.swift */,
+				9581FE94235C65140038E9BA /* L-389.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -420,6 +423,7 @@
 				95E846DC234D5E8D00C6DAF9 /* L-344.swift in Sources */,
 				9529E4AB23305A95007A24AD /* L-231.swift in Sources */,
 				956E2666231D539E00DE2C04 /* L-175.swift in Sources */,
+				9581FE95235C65140038E9BA /* L-389.swift in Sources */,
 				9537870F230FFD56003B7DE3 /* L-136.swift in Sources */,
 				95614B8E22FBF45500A4F61E /* L-058.swift in Sources */,
 				9571776023226895000B9374 /* L-198.swift in Sources */,
