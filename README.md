@@ -85,3 +85,4 @@ The practice of leetcode in SINA Comic BJ
 - L383 Ransom Note
 - L387 First Unique Character in a String
 - L389 Find the Difference
+- L392 Is Subsequence

@@ -127,6 +127,20 @@ class MyQueue {
 
 
 class Solution {
+    func isSubsequence(_ s: String, _ t: String) -> Bool {
+        guard s.isEmpty == false else { return true }
+        var sValue: String = s
+        var sChar: Character = sValue.removeFirst()
+        for (_, tChar) in t.enumerated() {
+            if tChar == sChar {
+                if sValue.isEmpty { return true } else {
+                    sChar = sValue.removeFirst()
+                }
+            }
+        }
+        return false
+    }
+    
     func findTheDifference(_ s: String, _ t: String) -> Character {
         var charInfo: [Character: Int] = [:]
         for (_, item) in s.enumerated() {
