@@ -28,6 +28,7 @@ The minute must be consist of two digits and may contain a leading zero, for exa
 */
 
 // 暴力计算法
+// https://leetcode-cn.com/problems/binary-watch/solution/cjian-jian-dan-dan-de-ji-xing-dai-ma-jie-jue-wen-t/
 /*
 func readBinaryWatch(_ num: Int) -> [String] {
     func countOneNum(_ num: Int) -> Int {
