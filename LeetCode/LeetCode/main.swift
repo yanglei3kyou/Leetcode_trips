@@ -127,6 +127,28 @@ class MyQueue {
 
 
 class Solution {
+    func readBinaryWatch(_ num: Int) -> [String] {
+        func countOneNum(_ num: Int) -> Int {
+            var count: Int = 0
+            var n = num
+            while n != 0 {
+                n = n & (n - 1)
+                count += 1
+            }
+            return count
+        }
+        
+        var result: [String] = []
+        for hour in 0..<12 {
+            for minu in 0..<60 {
+                if countOneNum(hour) + countOneNum(minu) == num {
+                    result.append("\(hour):" + (minu < 10 ? "0\(minu)" : "\(minu)"))
+                }
+            }
+        }
+        return result
+    }
+    
     func isSubsequence(_ s: String, _ t: String) -> Bool {
         guard s.isEmpty == false else { return true }
         var sValue: String = s

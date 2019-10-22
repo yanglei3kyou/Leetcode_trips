@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "579"
             endingLineNumber = "579"
-            landmarkName = "containsDuplicate(_:)"
+            landmarkName = "containsNearbyDuplicate1(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
             endingLineNumber = "224"
-            landmarkName = "intersect(_:_:)"
+            landmarkName = "isPerfectSquare2(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
             endingLineNumber = "147"
-            landmarkName = "firstUniqChar(_:)"
+            landmarkName = "findTheDifference(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
