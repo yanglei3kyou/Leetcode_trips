@@ -127,6 +127,34 @@ class MyQueue {
 
 
 class Solution {
+    func sumOfLeftLeaves(_ root: TreeNode?) -> Int {
+        guard let root = root else { return 0 }
+        var result: Int = 0
+        var nodes: [TreeNode] = [root]
+        while nodes.isEmpty == false {
+            let node = nodes.removeFirst()
+            if let left = node.left {
+                if left.left == nil, left.right == nil {
+                    result += left.val
+                } else {
+                    nodes.append(left)
+                }
+            }
+            if let right = node.right {
+                nodes.append(right)
+            }
+        }
+        return result
+    }
+    
+    func sumOfLeftLeaves1(_ root: TreeNode?) -> Int {
+        guard let node = root else { return 0 }
+        if let left = node.left, left.left == nil, left.right == nil {
+            return left.val + sumOfLeftLeaves(node.right)
+        }
+        return sumOfLeftLeaves(node.left) + sumOfLeftLeaves(node.right)
+    }
+    
     func readBinaryWatch(_ num: Int) -> [String] {
         func countOneNum(_ num: Int) -> Int {
             var count: Int = 0

@@ -87,3 +87,4 @@ The practice of leetcode in SINA Comic BJ
 - L389 Find the Difference
 - L392 Is Subsequence
 - L401 Binary Watch
+- L404 Sum of Left Leaves
