@@ -62,6 +62,7 @@
 		9581FE97235D31330038E9BA /* L-392.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581FE96235D31330038E9BA /* L-392.swift */; };
 		958A7D4A2304FAD7009E5435 /* L-107.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A7D492304FAD7009E5435 /* L-107.swift */; };
 		958A7D50230665BE009E5435 /* L-108.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A7D4F230665BE009E5435 /* L-108.swift */; };
+		9595771623656AEB00F82E4E /* L-409.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595771523656AEB00F82E4E /* L-409.swift */; };
 		95962C672343663E009A4A92 /* L-299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95962C662343663E009A4A92 /* L-299.swift */; };
 		9596951B2326993900909553 /* L-204.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596951A2326993900909553 /* L-204.swift */; };
 		959B7DE422EEEC2A00482BC5 /* L-007.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B7DE322EEEC2A00482BC5 /* L-007.swift */; };
@@ -79,6 +80,7 @@
 		95CC350D2314D0AC00A48272 /* L-167.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC350C2314D0AC00A48272 /* L-167.swift */; };
 		95D18C60235EA72C00C26157 /* L-401.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D18C5F235EA72C00C26157 /* L-401.swift */; };
 		95D18C62235FD60E00C26157 /* L-404.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D18C61235FD60E00C26157 /* L-404.swift */; };
+		95D18C642361252800C26157 /* L-405.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D18C632361252800C26157 /* L-405.swift */; };
 		95D73B312336766900958F88 /* L-237.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D73B302336766900958F88 /* L-237.swift */; };
 		95DB9F2E234031A90024B546 /* L-290.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DB9F2D234031A90024B546 /* L-290.swift */; };
 		95DE9A772303F00400C02D05 /* L-104.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DE9A762303F00400C02D05 /* L-104.swift */; };
@@ -168,6 +170,7 @@
 		9581FE96235D31330038E9BA /* L-392.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-392.swift"; sourceTree = "<group>"; };
 		958A7D492304FAD7009E5435 /* L-107.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-107.swift"; sourceTree = "<group>"; };
 		958A7D4F230665BE009E5435 /* L-108.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-108.swift"; sourceTree = "<group>"; };
+		9595771523656AEB00F82E4E /* L-409.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-409.swift"; sourceTree = "<group>"; };
 		95962C662343663E009A4A92 /* L-299.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-299.swift"; sourceTree = "<group>"; };
 		9596951A2326993900909553 /* L-204.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-204.swift"; sourceTree = "<group>"; };
 		959B7DE322EEEC2A00482BC5 /* L-007.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-007.swift"; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 		95CC350C2314D0AC00A48272 /* L-167.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-167.swift"; sourceTree = "<group>"; };
 		95D18C5F235EA72C00C26157 /* L-401.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-401.swift"; sourceTree = "<group>"; };
 		95D18C61235FD60E00C26157 /* L-404.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-404.swift"; sourceTree = "<group>"; };
+		95D18C632361252800C26157 /* L-405.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-405.swift"; sourceTree = "<group>"; };
 		95D73B302336766900958F88 /* L-237.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-237.swift"; sourceTree = "<group>"; };
 		95DB9F2D234031A90024B546 /* L-290.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-290.swift"; sourceTree = "<group>"; };
 		95DE9A762303F00400C02D05 /* L-104.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L-104.swift"; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 				9581FE96235D31330038E9BA /* L-392.swift */,
 				95D18C5F235EA72C00C26157 /* L-401.swift */,
 				95D18C61235FD60E00C26157 /* L-404.swift */,
+				95D18C632361252800C26157 /* L-405.swift */,
+				9595771523656AEB00F82E4E /* L-409.swift */,
 				950892C21D966D56008E4254 /* LeetCode-Bridging-Header.h */,
 			);
 			path = LeetCode;
@@ -456,6 +462,7 @@
 				95FA6C7A2325129C00BE655C /* L-203.swift in Sources */,
 				95FBB85922FE83D2002D6ABE /* L-070.swift in Sources */,
 				95F2139C2338477D00BF222B /* L-257.swift in Sources */,
+				9595771623656AEB00F82E4E /* L-409.swift in Sources */,
 				955CA13B234B405A00372FBB /* L-303.swift in Sources */,
 				95721200230183F800EBEE72 /* L-100.swift in Sources */,
 				95D73B312336766900958F88 /* L-237.swift in Sources */,
@@ -473,6 +480,7 @@
 				95FB3D87233C3B4D0054D795 /* L-268.swift in Sources */,
 				95B196CD22F06323003DF7AE /* L-014.swift in Sources */,
 				95405309230D564E0057EADA /* L-119.swift in Sources */,
+				95D18C642361252800C26157 /* L-405.swift in Sources */,
 				95962C672343663E009A4A92 /* L-299.swift in Sources */,
 				95EA99C52331AEB2000045A6 /* L-232.swift in Sources */,
 				950892C41D966D56008E4254 /* L-001.swift in Sources */,

@@ -127,6 +127,41 @@ class MyQueue {
 
 
 class Solution {
+    func longestPalindrome(_ s: String) -> Int {
+        var charMap: [Character: Int] = [:]
+        var count: Int = 0
+        for (_, char) in s.enumerated() {
+            charMap[char] = (charMap[char] ?? 0) + 1
+        }
+        var isSingle: Int = 0
+        for value in charMap.values {
+            count += value
+            if value % 2 != 0 {
+                isSingle = 1
+                count -= 1
+            }
+        }
+        return count + isSingle
+    }
+    
+    func toHex(_ num: Int) -> String {
+        guard num != 0 else { return "0" }
+        var result: String = ""
+        var value: Int = Int(num)
+        var valueMap: [Int: String] = [0 : "0", 1 : "1", 2 : "2", 3 : "3",
+                                       4 : "4", 5 : "5", 6 : "6", 7 : "7",
+                                       8 : "8", 9 : "9", 10: "a", 11: "b",
+                                       12: "c", 13: "d", 14: "e",  15: "f"]
+        var count: Int = 0
+        while value != 0, count < 32 {
+            result = (valueMap[value % 16] ?? "") + result
+//            value /= 16
+            value = value >> 4
+            count += 4
+        }
+        return result
+    }
+    
     func sumOfLeftLeaves(_ root: TreeNode?) -> Int {
         guard let root = root else { return 0 }
         var result: Int = 0
@@ -1208,5 +1243,5 @@ tree3.left = tree6
 tree3.right = tree7
 
 var arr = [0]
-var result = solutionFunc.canConstruct("aa", "aab")
+var result = solutionFunc.longestPalindrome("abccccdd")
 print(result)
